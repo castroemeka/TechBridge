@@ -796,3 +796,33 @@ body {
         gap: 1.5rem;
     }
 }
+
+
+
+.track-split-wrapper {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 3rem;
+            margin-bottom: 5rem;
+        }
+        .track-column {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+        .skills-external-box {
+            background: var(--obsidian-surface);
+            border: 1px solid var(--border-subtle);
+            border-radius: 1.5rem;
+            padding: 2.5rem;
+            transition: all 0.3s ease;
+        }
+        .skills-external-box:hover {
+            border-color: var(--gold);
+            transform: translateY(-4px);
+        }
+        @media (max-width: 968px) {
+            .track-split-wrapper {
+                grid-template-columns: 1fr;
+            }
+        }
