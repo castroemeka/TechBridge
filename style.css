@@ -826,3 +826,187 @@ body {
                 grid-template-columns: 1fr;
             }
         }
+
+
+
+         /* Unique Vertical Timeline Roadmap Layout */
+        .timeline-container {
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+            padding: 2rem 0;
+        }
+
+        /* The Central Timeline Vertical Line */
+        .timeline-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            width: 3px;
+            background: linear-gradient(to bottom, var(--gold), rgba(212, 175, 55, 0.2));
+            transform: translateX(-50%);
+        }
+
+        .timeline-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 3.5rem;
+            position: relative;
+            width: 100%;
+        }
+
+        /* Alternating sides for desktop timeline */
+        .timeline-item:nth-child(odd) {
+            flex-direction: row-reverse;
+        }
+
+        .timeline-content {
+            width: 44%;
+            background: var(--obsidian-card);
+            border: 1px solid var(--border-subtle);
+            border-radius: 1.5rem;
+            padding: 2.25rem;
+            position: relative;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .timeline-content:hover {
+            border-color: var(--gold);
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px -15px rgba(212, 175, 55, 0.15);
+        }
+
+        /* Glowing Milestone Node Center Marker */
+        .timeline-node {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 45px;
+            height: 45px;
+            background: var(--obsidian-surface);
+            border: 2px solid var(--gold);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--gold);
+            font-weight: 800;
+            font-size: 0.9rem;
+            box-shadow: 0 0 15px rgba(212, 175, 55, 0.3);
+            z-index: 10;
+        }
+
+        .timeline-header-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .timeline-day-pill {
+            background: rgba(212, 175, 55, 0.1);
+            color: var(--gold);
+            font-size: 0.85rem;
+            font-weight: 700;
+            padding: 0.3rem 0.8rem;
+            border-radius: 2rem;
+            border: 1px solid var(--border-luxury);
+        }
+
+        .timeline-difficulty {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            font-weight: 600;
+        }
+
+        .timeline-content h3 {
+            font-size: 1.35rem;
+            color: #ffffff;
+            margin-bottom: 0.75rem;
+        }
+
+        .timeline-content p {
+            color: var(--text-muted);
+            font-size: 0.98rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+
+        .timeline-action-link {
+            text-decoration: none;
+            color: var(--gold);
+            font-weight: 700;
+            font-size: 0.95rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: gap 0.2s ease;
+        }
+
+        .timeline-action-link:hover {
+            gap: 0.75rem;
+        }
+
+        /* Responsive Timeline Adjustments for Mobile & Tablets */
+        @media (max-width: 768px) {
+            .timeline-container::before {
+                left: 25px;
+            }
+            .timeline-item, .timeline-item:nth-child(odd) {
+                flex-direction: row;
+                justify-content: flex-end;
+            }
+            .timeline-content {
+                width: calc(100% - 65px);
+            }
+            .timeline-node {
+                left: 25px;
+            }
+            .nav-menu {
+                display: none;
+            }
+        }
+
+
+
+        /* --- INTERNSHIP TASK HYPERLINK STYLING --- */
+/* --- LUXURY INTERNSHIP TASK BUTTON --- */
+.internship-task-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: var(--gold);
+    font-size: 1.05rem;
+    font-weight: 700;
+    text-decoration: none;
+    padding:  1.75rem;
+    margin-bottom: 8rem;
+
+    border-radius: 0.75rem;
+    background: rgba(212, 175, 55, 0.08);
+    border: 1px solid var(--border-luxury);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.internship-task-btn:hover {
+    background: var(--gold);
+    color: var(--obsidian);
+    border-color: var(--gold);
+    transform: translateY(-4px) scale(1.02);
+    box-shadow: 0 12px 30px rgba(212, 175, 55, 0.35);
+}
+
+.internship-task-btn i {
+    transition: transform 0.3s ease;
+}
+
+.internship-task-btn:hover i {
+    transform: translateX(4px);
+}
