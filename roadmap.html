@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TechBridge | Interactive Internship Roadmap</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- FontAwesome Luxury Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- Luxury Header / Navbar matching Workspace files -->
+  <header class="header">
+    <div class="nav-container">
+      <a href="index.html" class="logo-link">
+        <span class="brand-text">TechBridge</span>
+      </a>
+
+      <nav class="nav-menu" id="navMenu">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="./program.html" class="nav-link">Programs</a>
+        <a href="tasks.html" class="nav-link active-page" style="color: var(--gold);">Internship Roadmap</a>
+      </nav>
+
+      <div class="nav-cta-group">
+        <a href="https://www.linkedin.com/company/techbridge-services/" target="_blank" class="social-btn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://www.facebook.com/p/Baselink-Services-100066771475783/" target="_blank" class="social-btn"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://docs.google.com/forms/u/0/" target="_blank" class="btn-luxury-outline">Apply Now</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section with Obsidian & Gold Radial Gradient -->
+  <section class="hero-luxury">
+    <div class="hero-container">
+      <div class="hero-badge">
+        <i class="fa-solid fa-route"></i> 30-Day Practical Internship
+      </div>
+      <h1>Interactive <span class="gold-text">Internship Roadmap</span></h1>
+      <p class="hero-subtitle">
+        Explore what you will build and learn over 30 days. Switch between tracks seamlessly without refreshing the page to view your complete 8-task journey.
+      </p>
+    </div>
+  </section>
+
+  <!-- Main Dashboard Layout -->
+  <main class="container dashboard-main">
+    
+    <!-- Sidebar Control Panel -->
+    <aside class="control-sidebar">
+      <h3>Choose Your Track</h3>
+      <div class="track-buttons">
+        <button id="btn-data" class="track-tab active" data-track="data">
+          📊 Data Analytics
+        </button>
+        <button id="btn-web" class="track-tab" data-track="web">
+          💻 Web Development
+        </button>
+      </div>
+
+      <div class="track-info-card">
+        <span class="info-label">Currently Viewing</span>
+        <h4 id="sidebar-track-title">Data Analytics</h4>
+        <p id="sidebar-track-desc">Master spreadsheets, SQL, data wrangling, and end-to-end business analysis.</p>
+      </div>
+
+      <div class="timeline-summary">
+        <h4>30-Day Structure</h4>
+        <div class="timeline-pills">
+          <span>Day 1</span><span>Day 4</span><span>Day 8</span><span>Day 11</span>
+          <span>Day 15</span><span>Day 19</span><span>Day 22</span><span>Day 26</span>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Content Workspace Area -->
+    <section class="workspace-content">
+      <div class="workspace-header">
+        <div>
+          <span id="current-view-tag" class="view-tag">Data Analytics Track</span>
+          <h2 id="workspace-heading">8 Milestones & Tasks</h2>
+        </div>
+        <span class="task-count-badge" id="task-count-badge">8 Tasks Available</span>
+      </div>
+
+      <!-- Dynamic Task List Grid -->
+      <div id="roadmap-grid" class="roadmap-grid">
+        <!-- JavaScript dynamically injects task cards here -->
+      </div>
+    </section>
+
+
+  </main>
+
+      <div style="margin-top: 2rem; text-align: center;">
+    <a href="experience.html" class="internship-task-btn">
+        <i class="fa-solid fa-route"></i> Explore Web Development Internship Tasks Experience →
+    </a>
+</div>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© 2026 TechBridge Internship Program • Bridging Learning to Real-World Experience</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
