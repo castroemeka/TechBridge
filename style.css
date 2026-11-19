@@ -1,1459 +1,946 @@
-/* --- LUXURY CSS RESET & VARIABLES --- */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-}
-
-:root {
-    --obsidian: #09090b;
-    --obsidian-surface: #121216;
-    --obsidian-card: #18181c;
-    --gold: #d4af37;
-    --gold-hover: #b3922c;
-    --text-light: #f4f4f5;
-    --text-muted: #a1a1aa;
-    --border-luxury: rgba(212, 175, 55, 0.2);
-    --border-subtle: rgba(255, 255, 255, 0.08);
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    background-color: var(--obsidian);
-    color: var(--text-light);
-    font-size: 1.05rem;
-    line-height: 1.7;
-}
-
-/* --- HOVER INTERACTION ANIMATION --- */
-.hover-lift {
-    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease;
-}
-
-.hover-lift:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 20px 40px -15px rgba(212, 175, 55, 0.15);
-    border-color: var(--gold);
-}
-
-/* --- LUXURY HEADER --- */
-.header {
-    background: rgba(9, 9, 11, 0.85);
-    backdrop-filter: blur(16px);
-    border-bottom: 1px solid var(--border-subtle);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
-
-.nav-container {
-    max-width: 1320px;
-    margin: 0 auto;
-    padding: 1.25rem 2.5rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.brand-logo-img {
-    height: 100px;
-    width: auto;
-    display: block;
-    filter: brightness(0) invert(1);
-}
-
-.nav-menu {
-    display: flex;
-    gap: 2.5rem;
-}
-
-.nav-link {
-    text-decoration: none;
-    color: var(--text-muted);
-    font-size: 1.3rem;
-    font-weight: 500;
-    transition: color 0.2s ease;
-}
-
-.nav-link:hover {
-    color: var(--gold);
-}
-
-.nav-cta-group {
-    display: flex;
-    align-items: center;
-    gap: 1.25rem;
-}
-
-.social-btn {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background: var(--obsidian-surface);
-    color: var(--text-light);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    font-size: 1rem;
-    border: 1px solid var(--border-subtle);
-    transition: all 0.3s ease;
-}
-
-.social-btn:hover {
-    background: var(--gold);
-    color: var(--obsidian);
-    border-color: var(--gold);
-    transform: translateY(-3px);
-}
-
-.btn-luxury-outline {
-    background: transparent;
-    color: var(--text-light);
-    text-decoration: none;
-    padding: 0.75rem 1.75rem;
-    border-radius: 2rem;
-    font-size: 1rem;
-    font-weight: 600;
-    border: 1px solid var(--gold);
-    transition: all 0.3s ease;
-}
-
-.btn-luxury-outline:hover {
-    background: var(--gold);
-    color: var(--obsidian);
-    transform: translateY(-2px);
-}
-
-.hamburger {
-    display: none;
-    flex-direction: column;
-    gap: 6px;
-    background: none;
-    border: none;
-    cursor: pointer;
-}
-
-.hamburger span {
-    display: block;
-    width: 28px;
-    height: 2px;
-    background: var(--gold);
-    transition: 0.3s;
-}
-
-/* --- HERO SECTION --- */
-.hero-luxury {
-    background: radial-gradient(circle at 50% 20%, #1a1810 0%, var(--obsidian) 70%);
-    padding: 8rem 2.5rem 7rem 2.5rem;
-    text-align: center;
-}
-
-.hero-container {
-    max-width: 900px;
-    margin: 0 auto;
-}
-
-.hero-badge {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.6rem;
-    background: rgba(212, 175, 55, 0.1);
-    color: var(--gold);
-    padding: 0.5rem 1.25rem;
-    border-radius: 2rem;
-    font-size: 0.95rem;
-    font-weight: 600;
-    margin-bottom: 2rem;
-    border: 1px solid var(--border-luxury);
-}
-
-.hero-luxury h1 {
-    font-size: 4rem;
-    font-weight: 800;
-    color: #ffffff;
-    line-height: 1.15;
-    margin-bottom: 1.75rem;
-    letter-spacing: -0.02em;
-}
-
-.gold-text {
-    background: linear-gradient(135deg, #ffffff 20%, var(--gold) 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-.hero-subtitle {
-    font-size: 1.25rem;
-    color: var(--text-muted);
-    margin-bottom: 3rem;
-    line-height: 1.8;
-}
-
-.hero-cta-row {
-    display: flex;
-    justify-content: center;
-    gap: 1.5rem;
-    flex-wrap: wrap;
-}
-
-.btn-gold-solid {
-    background: var(--gold);
-    color: var(--obsidian);
-    text-decoration: none;
-    padding: 1rem 2.25rem;
-    border-radius: 0.75rem;
-    font-size: 1.05rem;
-    font-weight: 700;
-    display: inline-flex;
-    align-items: center;
-    gap: 0.75rem;
-    transition: all 0.3s ease;
-    box-shadow: 0 10px 25px rgba(212, 175, 55, 0.2);
-}
-
-.btn-gold-solid:hover {
-    background: var(--gold-hover);
-    transform: translateY(-3px);
-    box-shadow: 0 15px 30px rgba(212, 175, 55, 0.35);
-}
-
-.btn-glass {
-    background: rgba(255, 255, 255, 0.05);
-    color: var(--text-light);
-    text-decoration: none;
-    padding: 1rem 2.25rem;
-    border-radius: 0.75rem;
-    font-size: 1.05rem;
-    font-weight: 600;
-    border: 1px solid var(--border-subtle);
-    display: inline-flex;
-    align-items: center;
-    gap: 0.75rem;
-    transition: all 0.3s ease;
-}
-
-.btn-glass i {
-    color: #25d366;
-}
-
-.btn-glass:hover {
-    background: rgba(255, 255, 255, 0.1);
-    border-color: var(--text-muted);
-    transform: translateY(-3px);
-}
-
-/* --- TICKER BAR --- */
-.luxury-ticker {
-    background: var(--obsidian-surface);
-    border-top: 1px solid var(--border-subtle);
-    border-bottom: 1px solid var(--border-subtle);
-    padding: 1.25rem 0;
-    overflow: hidden;
-}
-
-.ticker-content {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 2rem;
-    max-width: 1320px;
-    margin: 0 auto;
-    padding: 0 2.5rem;
-    font-size: 1.05rem;
-    font-weight: 600;
-    color: var(--gold);
-    letter-spacing: 0.05em;
-}
-
-/* --- SECTION GENERAL STYLING --- */
-.section-container {
-    max-width: 1320px;
-    margin: 0 auto;
-    padding: 7rem 2.5rem;
-}
-
-.center-header {
-    text-align: center;
-    max-width: 750px;
-    margin: 0 auto 5rem auto;
-}
-
-.section-gold-eyebrow {
-    color: var(--gold);
-    font-size: 0.9rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.15em;
-    margin-bottom: 0.75rem;
-}
-
-.center-header h2, .about-text h2 {
-    font-size: 3rem;
-    font-weight: 800;
-    color: #ffffff;
-    margin-bottom: 1.25rem;
-    letter-spacing: -0.01em;
-}
-
-.center-header p, .about-text p {
-    color: var(--text-muted);
-    font-size: 1.15rem;
-}
-
-/* --- ABOUT SECTION --- */
-.about-luxury-grid {
-    display: grid;
-    grid-template-columns: 1.2fr 0.8fr;
-    gap: 5rem;
-    align-items: center;
-}
-
-.about-text p {
-    margin-bottom: 2.5rem;
-}
-
-.luxury-features-list {
-    display: flex;
-    flex-direction: column;
-    gap: 1.75rem;
-}
-
-.l-feature {
-    display: flex;
-    gap: 1.25rem;
-    align-items: flex-start;
-}
-
-.l-feature i {
-    color: var(--gold);
-    font-size: 1.5rem;
-    margin-top: 0.2rem;
-}
-
-.l-feature h4 {
-    font-size: 1.2rem;
-    color: #ffffff;
-    margin-bottom: 0.35rem;
-}
-
-.l-feature p {
-    font-size: 1rem;
-    color: var(--text-muted);
-    margin-bottom: 0;
-}
-
-.about-card-box {
-    background: linear-gradient(145deg, var(--obsidian-surface), var(--obsidian-card));
-    border: 1px solid var(--border-luxury);
-    border-radius: 1.5rem;
-    padding: 3rem;
-    position: relative;
-    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
-}
-
-.about-card-box h3 {
-    font-size: 1.75rem;
-    color: #ffffff;
-    margin-bottom: 1rem;
-}
-
-.about-card-box p {
-    color: var(--text-muted);
-    font-size: 1.05rem;
-    margin-bottom: 2.5rem;
-}
-
-.card-stats-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
-    border-top: 1px solid var(--border-subtle);
-    padding-top: 2rem;
-}
-
-.stat-num {
-    display: block;
-    font-size: 2.25rem;
-    font-weight: 800;
-    color: var(--gold);
-    line-height: 1;
-    margin-bottom: 0.5rem;
-}
-
-.stat-label {
-    font-size: 0.9rem;
-    color: var(--text-muted);
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-}
-
-/* --- PROGRAMS SECTION --- */
-.programs-luxury-section {
-    background-color: var(--obsidian-surface);
-    border-top: 1px solid var(--border-subtle);
-    border-bottom: 1px solid var(--border-subtle);
-}
-
-.luxury-programs-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2.5rem;
-}
-
-.luxury-card {
-    background: var(--obsidian-card);
-    border: 1px solid var(--border-subtle);
-    border-radius: 1.5rem;
-    padding: 3rem 2.5rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.card-top-icon {
-    width: 65px;
-    height: 65px;
-    background: rgba(212, 175, 55, 0.1);
-    color: var(--gold);
-    border-radius: 1rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.5rem;
-    margin-bottom: 2rem;
-    border: 1px solid var(--border-luxury);
-}
-
-.luxury-card h3 {
-    font-size: 1.5rem;
-    color: #ffffff;
-    margin-bottom: 1rem;
-}
-
-.luxury-card p {
-    color: var(--text-muted);
-    font-size: 1.05rem;
-    margin-bottom: 2rem;
-}
-
-.luxury-list {
-    list-style: none;
-    margin-bottom: 2.5rem;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    font-size: 1rem;
-    color: #d4d4d8;
-}
-
-.luxury-list li::before {
-    content: "✦ ";
-    color: var(--gold);
-    font-weight: bold;
-    margin-right: 0.5rem;
-}
-
-.card-action-link {
-    text-decoration: none;
-    font-weight: 700;
-    color: var(--gold);
-    font-size: 1.05rem;
-    transition: color 0.2s ease;
-}
-
-.card-action-link:hover {
-    color: #ffffff;
-}
-
-/* Flagship Card Special Variant */
-.luxury-card.flagship-luxury {
-    background: linear-gradient(145deg, #18181c, #272314);
-    border: 1px solid var(--gold);
-    position: relative;
-}
-
-.gold-pill-tag {
-    position: absolute;
-    top: -14px;
-    right: 2.5rem;
-    background: var(--gold);
-    color: var(--obsidian);
-    font-size: 0.75rem;
-    font-weight: 800;
-    text-transform: uppercase;
-    padding: 0.35rem 1rem;
-    border-radius: 2rem;
-    letter-spacing: 0.05em;
-}
-
-.card-top-icon.gold-icon {
-    background: var(--gold);
-    color: var(--obsidian);
-}
-
-.light-mode-list {
-    color: #f4f4f5;
-}
-
-/* --- WHY CHOOSE US --- */
-.why-luxury-section {
-    background: var(--obsidian);
-}
-
-.luxury-benefits-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2.5rem;
-}
-
-.benefit-box {
-    background: var(--obsidian-surface);
-    border: 1px solid var(--border-subtle);
-    padding: 3rem 2.5rem;
-    border-radius: 1.5rem;
-}
-
-.gold-number {
-    font-size: 3rem;
-    font-weight: 900;
-    color: var(--gold);
-    display: block;
-    margin-bottom: 1.25rem;
-    line-height: 1;
-    opacity: 0.8;
-}
-
-.benefit-box h4 {
-    font-size: 1.35rem;
-    color: #ffffff;
-    margin-bottom: 1rem;
-}
-
-.benefit-box p {
-    color: var(--text-muted);
-    font-size: 1.05rem;
-}
-
-/* --- COMMUNITY BANNER --- */
-.community-luxury-banner {
-    background: linear-gradient(135deg, #121216 0%, #1f1b0c 100%);
-    border-top: 1px solid var(--border-luxury);
-    border-bottom: 1px solid var(--border-luxury);
-    padding: 6rem 2.5rem;
-}
-
-.banner-flex {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 4rem;
-}
-
-.whatsapp-badge {
-    background: rgba(37, 211, 102, 0.1);
-    color: #25d366;
-    border: 1px solid rgba(37, 211, 102, 0.3);
-    padding: 0.4rem 1.25rem;
-    border-radius: 2rem;
-    font-size: 0.9rem;
-    font-weight: 600;
-    display: inline-block;
-    margin-bottom: 1.25rem;
-}
-
-.banner-flex h2 {
-    font-size: 2.75rem;
-    font-weight: 800;
-    color: #ffffff;
-    margin-bottom: 0.75rem;
-}
-
-.banner-flex p {
-    color: var(--text-muted);
-    font-size: 1.15rem;
-}
-
-.btn-whatsapp-luxury {
-    background: #25d366;
-    color: #ffffff;
-    text-decoration: none;
-    padding: 1.15rem 2.5rem;
-    border-radius: 0.75rem;
-    font-size: 1.1rem;
-    font-weight: 700;
-    display: inline-flex;
-    align-items: center;
-    gap: 0.75rem;
-    transition: all 0.3s ease;
-    white-space: nowrap;
-    box-shadow: 0 10px 25px rgba(37, 211, 102, 0.25);
-}
-
-.btn-whatsapp-luxury:hover {
-    background: #20ba5a;
-    transform: translateY(-3px);
-}
-
-/* --- APPLY SECTION --- */
-.apply-luxury-section {
-    background: var(--obsidian-surface);
-}
-
-.apply-luxury-box {
-    background: var(--obsidian-card);
-    border: 1px solid var(--border-luxury);
-    border-radius: 1.75rem;
-    padding: 5rem 3.5rem;
-    text-align: center;
-    max-width: 1000px;
-    margin: 0 auto;
-    box-shadow: 0 30px 60px rgba(0,0,0,0.5);
-}
-
-.apply-luxury-box h2 {
-    font-size: 3rem;
-    color: #ffffff;
-    margin-bottom: 1rem;
-}
-
-.apply-luxury-box p {
-    color: var(--text-muted);
-    font-size: 1.15rem;
-    margin-bottom: 3.5rem;
-}
-
-.apply-grid-options {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
-    margin-bottom: 3.5rem;
-}
-
-.luxury-option-card {
-    background: var(--obsidian);
-    border: 1px solid var(--border-subtle);
-    padding: 2rem;
-    border-radius: 1.25rem;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    gap: 1.5rem;
-    text-align: left;
-}
-
-.luxury-option-card i {
-    font-size: 1.75rem;
-    color: var(--gold);
-    background: rgba(212, 175, 55, 0.1);
-    padding: 1.25rem;
-    border-radius: 1rem;
-    border: 1px solid var(--border-luxury);
-    flex-shrink: 0;
-}
-
-.luxury-option-card h4 {
-    font-size: 1.15rem;
-    color: #ffffff;
-    margin-bottom: 0.35rem;
-}
-
-.luxury-option-card p {
-    font-size: 0.9rem;
-    color: var(--text-muted);
-    margin-bottom: 0;
-}
-
-.contact-strip-luxury {
-    border-top: 1px solid var(--border-subtle);
-    padding-top: 2.5rem;
-    font-size: 1.05rem;
-    color: var(--text-muted);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.75rem;
-}
-
-.contact-strip-luxury a {
-    color: var(--gold);
-    font-weight: 600;
-    text-decoration: none;
-}
-
-.contact-strip-luxury a:hover {
-    text-decoration: underline;
-}
-
-/* --- FOOTER --- */
-.footer-luxury {
-    background: var(--obsidian);
-    border-top: 1px solid var(--border-subtle);
-    padding: 5rem 0 2rem 0;
-}
-
-.footer-flex {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 3rem;
-    padding-bottom: 4rem;
-    border-bottom: 1px solid var(--border-subtle);
-}
-
-.footer-logo-img {
-    height: 150px;
-    width: auto;
-    margin-bottom: 1.25rem;
-    filter: brightness(0) invert(1);
-}
-
-.footer-brand p {
-    font-size: 1rem;
-    color: var(--text-muted);
-    max-width: 340px;
-}
-
-.footer-socials h5 {
-    color: #ffffff;
-    font-size: 1.15rem;
-    margin-bottom: 1.25rem;
-}
-
-.social-links-row {
-    display: flex;
-    flex-direction: column;
-    gap: 0.85rem;
-}
-
-.social-links-row a {
-    color: var(--text-muted);
-    text-decoration: none;
-    font-size: 1.05rem;
-    transition: color 0.2s ease;
-}
-
-.social-links-row a:hover {
-    color: var(--gold);
-}
-
-.footer-bottom-bar {
-    text-align: center;
-    padding-top: 2.5rem;
-    font-size: 0.95rem;
-    color: var(--text-muted);
-}
-
-/* --- RESPONSIVE MEDIA QUERIES --- */
-@media (max-width: 968px) {
-    .hero-luxury h1 {
-        font-size: 3rem;
+/**
+ * TechBridge Luxury Script - Handles mobile hamburger menu toggle.
+ */
+document.addEventListener('DOMContentLoaded', () => {
+    const hamburgerBtn = document.getElementById('hamburgerBtn');
+    const navMenu = document.getElementById('navMenu');
+    const navLinks = document.querySelectorAll('.nav-link');
+
+    if (hamburgerBtn && navMenu) {
+        hamburgerBtn.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+
+        // Close mobile drawer automatically when a nav link is clicked
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+            });
+        });
     }
+});
 
-    .about-luxury-grid {
-        grid-template-columns: 1fr;
-        gap: 3.5rem;
+
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const hamburgerBtn = document.getElementById('hamburgerBtn');
+    const navMenu = document.getElementById('navMenu');
+    const navLinks = document.querySelectorAll('.nav-link');
+
+    if (hamburgerBtn && navMenu) {
+        hamburgerBtn.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+
+        // Close mobile drawer automatically when a nav link is clicked
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+            });
+        });
     }
+});
 
-    .luxury-programs-grid, .luxury-benefits-grid {
-        grid-template-columns: 1fr;
-    }
 
-    .banner-flex {
-        flex-direction: column;
-        text-align: center;
-    }
 
-    .apply-grid-options {
-        grid-template-columns: 1fr;
-    }
 
-    .nav-menu, .nav-cta-group {
-        display: none;
-    }
 
-    .hamburger {
-        display: flex;
-    }
 
-    /* Mobile Drawer Menu */
-    .nav-menu.active {
-        display: flex;
-        flex-direction: column;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        background: var(--obsidian-card);
-        padding: 2.5rem;
-        border-bottom: 1px solid var(--border-subtle);
-        box-shadow: 0 20px 40px rgba(0,0,0,0.6);
-        gap: 1.5rem;
-    }
+
+
+
+
+
+// 1. VARIABLES & 2. ARRAYS OF 3. OBJECTS
+const dataAnalyticsTasks = [
+  {
+    number: 1,
+    title: "Data Cleaning Basics",
+    day: 1,
+    description: "Clean a messy dataset using Google Sheets or Excel. Identify and fix duplicate rows, blank cells, inconsistent formatting, and incorrect data types.",
+    difficulty: "Beginner"
+  },
+  {
+    number: 2,
+    title: "Formulas & Pivot Tables",
+    day: 4,
+    description: "Use spreadsheet formulas and Pivot Tables to answer questions and extract useful insights from a dataset.",
+    difficulty: "Beginner"
+  },
+  {
+    number: 3,
+    title: "Data Visualization",
+    day: 8,
+    description: "Create charts and a simple dashboard that communicate useful insights from a dataset.",
+    difficulty: "Beginner → Intermediate"
+  },
+  {
+    number: 4,
+    title: "Introduction to SQL",
+    day: 11,
+    description: "Practice basic SQL queries and use them to answer real-world questions about data.",
+    difficulty: "Beginner → Intermediate"
+  },
+  {
+    number: 5,
+    title: "SQL Joins & Aggregations",
+    day: 15,
+    description: "Use JOIN, GROUP BY and aggregate functions such as COUNT, SUM and AVG to analyze information across multiple tables.",
+    difficulty: "Intermediate"
+  },
+  {
+    number: 6,
+    title: "Lookup Functions & Data Wrangling",
+    day: 19,
+    description: "Use VLOOKUP or XLOOKUP to combine related datasets and handle data mismatches.",
+    difficulty: "Intermediate"
+  },
+  {
+    number: 7,
+    title: "Mini Analysis Project",
+    day: 22,
+    description: "Complete a small end-to-end analysis involving data cleaning, formulas, Pivot Tables, charts and recommendations.",
+    difficulty: "Intermediate"
+  },
+  {
+    number: 8,
+    title: "Capstone Project",
+    day: 26,
+    description: "Complete a larger project combining spreadsheet analysis and SQL using at least two related tables.",
+    difficulty: "Intermediate"
+  }
+];
+
+const webDevelopmentTasks = [
+  {
+    number: 1,
+    title: "Build the TechBridge Homepage",
+    day: 1,
+    description: "Create the first version of the TechBridge website using HTML and CSS.",
+    difficulty: "Beginner"
+  },
+  {
+    number: 2,
+    title: "Build the TechBridge Programs Experience",
+    day: 4,
+    description: "Create a Programs experience presenting TechBridge's available learning programs.",
+    difficulty: "Beginner"
+  },
+  {
+    number: 3,
+    title: "Build the Internship Tasks Experience",
+    day: 8,
+    description: "Create an interface that presents the TechBridge internship tasks and helps users understand the internship journey.",
+    difficulty: "Beginner → Intermediate"
+  },
+  {
+    number: 4,
+    title: "Build an Interactive Internship Roadmap",
+    day: 11,
+    description: "Use JavaScript to allow visitors to switch between the Data Analytics and Web Development internship tracks.",
+    difficulty: "Beginner → Intermediate"
+  },
+  {
+    number: 5,
+    title: "Build the Intern Registration Experience",
+    day: 15,
+    description: "Create a professional registration and onboarding interface for TechBridge interns.",
+    difficulty: "Intermediate"
+  },
+  {
+    number: 6,
+    title: "Build the Task Submission System",
+    day: 19,
+    description: "Create an interface through which interns can prepare and submit their task work.",
+    difficulty: "Intermediate"
+  },
+  {
+    number: 7,
+    title: "Build the Intern Dashboard",
+    day: 22,
+    description: "Create a dashboard where an intern can view their profile, progress, tasks and submissions.",
+    difficulty: "Intermediate"
+  },
+  {
+    number: 8,
+    title: "Build the Complete TechBridge Internship Platform",
+    day: 26,
+    description: "Combine the different components created during the internship into a complete TechBridge platform.",
+    difficulty: "Intermediate"
+  }
+];
+
+// State tracking variable
+let currentTrack = "data";
+
+// DOM Element References
+const btnData = document.getElementById("btn-data");
+const btnWeb = document.getElementById("btn-web");
+const sidebarTrackTitle = document.getElementById("sidebar-track-title");
+const sidebarTrackDesc = document.getElementById("sidebar-track-desc");
+const currentViewTag = document.getElementById("current-view-tag");
+const workspaceHeading = document.getElementById("workspace-heading");
+const roadmapGrid = document.getElementById("roadmap-grid");
+
+// 4. FUNCTIONS & 6. CONDITIONAL LOGIC
+function getDifficultyBadgeClass(difficulty) {
+  if (difficulty === "Beginner") return "diff-beginner";
+  if (difficulty === "Beginner → Intermediate") return "diff-transition";
+  return "diff-intermediate";
 }
 
+function renderTrack(trackKey) {
+  currentTrack = trackKey;
+  let activeTasks = [];
 
+  // Conditional logic to switch active dataset and update UI metadata
+  if (currentTrack === "data") {
+    activeTasks = dataAnalyticsTasks;
+    sidebarTrackTitle.textContent = "Data Analytics";
+    sidebarTrackDesc.textContent = "Master spreadsheets, SQL, data wrangling, and end-to-end business analysis.";
+    currentViewTag.textContent = "Data Analytics Track";
+    workspaceHeading.textContent = "Data Analytics 30-Day Roadmap";
+    btnData.classList.add("active");
+    btnWeb.classList.remove("active");
+  } else {
+    activeTasks = webDevelopmentTasks;
+    sidebarTrackTitle.textContent = "Web Development";
+    sidebarTrackDesc.textContent = "Build responsive interfaces, JavaScript apps, and a full internship platform.";
+    currentViewTag.textContent = "Web Development Track";
+    workspaceHeading.textContent = "Web Development 30-Day Roadmap";
+    btnWeb.classList.add("active");
+    btnData.classList.remove("active");
+  }
 
-.track-split-wrapper {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 3rem;
-            margin-bottom: 5rem;
-        }
-        .track-column {
-            display: flex;
-            flex-direction: column;
-            gap: 1.5rem;
-        }
-        .skills-external-box {
-            background: var(--obsidian-surface);
-            border: 1px solid var(--border-subtle);
-            border-radius: 1.5rem;
-            padding: 2.5rem;
-            transition: all 0.3s ease;
-        }
-        .skills-external-box:hover {
-            border-color: var(--gold);
-            transform: translateY(-4px);
-        }
-        @media (max-width: 968px) {
-            .track-split-wrapper {
-                grid-template-columns: 1fr;
-            }
-        }
+  // 7. DOM MANIPULATION: Clear and dynamically populate grid cards
+  roadmapGrid.innerHTML = "";
 
+  activeTasks.forEach(function (task) {
+    const badgeClass = getDifficultyBadgeClass(task.difficulty);
 
+    const card = document.createElement("div");
+    card.className = "task-card";
+    card.innerHTML = `
+      <div>
+        <div class="card-top">
+          <span class="task-meta-num">Task ${task.number}</span>
+          <span class="difficulty-badge ${badgeClass}">${task.difficulty}</span>
+        </div>
+        <h3>${task.title}</h3>
+        <span class="task-day-tag">Day ${task.day}</span>
+        <p>${task.description}</p>
+      </div>
+    `;
 
-         /* Unique Vertical Timeline Roadmap Layout */
-        .timeline-container {
-            max-width: 900px;
-            margin: 0 auto;
-            position: relative;
-            padding: 2rem 0;
-        }
-
-        /* The Central Timeline Vertical Line */
-        .timeline-container::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            left: 50%;
-            width: 3px;
-            background: linear-gradient(to bottom, var(--gold), rgba(212, 175, 55, 0.2));
-            transform: translateX(-50%);
-        }
-
-        .timeline-item {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 3.5rem;
-            position: relative;
-            width: 100%;
-        }
-
-        /* Alternating sides for desktop timeline */
-        .timeline-item:nth-child(odd) {
-            flex-direction: row-reverse;
-        }
-
-        .timeline-content {
-            width: 44%;
-            background: var(--obsidian-card);
-            border: 1px solid var(--border-subtle);
-            border-radius: 1.5rem;
-            padding: 2.25rem;
-            position: relative;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-        }
-
-        .timeline-content:hover {
-            border-color: var(--gold);
-            transform: translateY(-5px);
-            box-shadow: 0 20px 40px -15px rgba(212, 175, 55, 0.15);
-        }
-
-        /* Glowing Milestone Node Center Marker */
-        .timeline-node {
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 45px;
-            height: 45px;
-            background: var(--obsidian-surface);
-            border: 2px solid var(--gold);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--gold);
-            font-weight: 800;
-            font-size: 0.9rem;
-            box-shadow: 0 0 15px rgba(212, 175, 55, 0.3);
-            z-index: 10;
-        }
-
-        .timeline-header-row {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 1rem;
-        }
-
-        .timeline-day-pill {
-            background: rgba(212, 175, 55, 0.1);
-            color: var(--gold);
-            font-size: 0.85rem;
-            font-weight: 700;
-            padding: 0.3rem 0.8rem;
-            border-radius: 2rem;
-            border: 1px solid var(--border-luxury);
-        }
-
-        .timeline-difficulty {
-            font-size: 0.8rem;
-            color: var(--text-muted);
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            font-weight: 600;
-        }
-
-        .timeline-content h3 {
-            font-size: 1.35rem;
-            color: #ffffff;
-            margin-bottom: 0.75rem;
-        }
-
-        .timeline-content p {
-            color: var(--text-muted);
-            font-size: 0.98rem;
-            margin-bottom: 1.5rem;
-            line-height: 1.6;
-        }
-
-        .timeline-action-link {
-            text-decoration: none;
-            color: var(--gold);
-            font-weight: 700;
-            font-size: 0.95rem;
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            transition: gap 0.2s ease;
-        }
-
-        .timeline-action-link:hover {
-            gap: 0.75rem;
-        }
-
-        /* Responsive Timeline Adjustments for Mobile & Tablets */
-        @media (max-width: 768px) {
-            .timeline-container::before {
-                left: 25px;
-            }
-            .timeline-item, .timeline-item:nth-child(odd) {
-                flex-direction: row;
-                justify-content: flex-end;
-            }
-            .timeline-content {
-                width: calc(100% - 65px);
-            }
-            .timeline-node {
-                left: 25px;
-            }
-            .nav-menu {
-                display: none;
-            }
-        }
-
-
-
-        /* --- INTERNSHIP TASK HYPERLINK STYLING --- */
-/* --- LUXURY INTERNSHIP TASK BUTTON --- */
-.internship-task-btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.75rem;
-    color: var(--gold);
-    font-size: 1.05rem;
-    font-weight: 700;
-    text-decoration: none;
-    padding:  1.75rem;
-    margin-bottom: 8rem;
-
-    border-radius: 0.75rem;
-    background: rgba(212, 175, 55, 0.08);
-    border: 1px solid var(--border-luxury);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-    transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    roadmapGrid.appendChild(card);
+  });
 }
 
-.internship-task-btn:hover {
-    background: var(--gold);
-    color: var(--obsidian);
-    border-color: var(--gold);
-    transform: translateY(-4px) scale(1.02);
-    box-shadow: 0 12px 30px rgba(212, 175, 55, 0.35);
+// 5. EVENT LISTENERS
+btnData.addEventListener("click", function () {
+  renderTrack("data");
+});
+
+btnWeb.addEventListener("click", function () {
+  renderTrack("web");
+});
+
+// Initial Page Load
+renderTrack(currentTrack);
+
+
+
+
+
+
+
+
+
+
+
+
+
+// cHALLENGE HUB JS
+/**
+ * TechBridge – Interactive Challenge Hub (Task 5)
+ * Handles challenge rendering, multi-criteria filtering (Track + Difficulty + Search),
+ * dynamic challenge detail modals, mobile navigation, and accessibility states.
+ */
+
+/**
+ * TechBridge – Interactive Challenge Hub (Task 5)
+ * Handles challenge rendering, multi-criteria filtering (Track + Difficulty + Search),
+ * dynamic challenge detail modals, mobile navigation, and accessibility states.
+ */
+
+'use strict';
+
+/* ==========================================================================
+   1. Challenge Data Repository
+   ========================================================================== */
+const challengesData = [
+  // DATA ANALYTICS TRACK
+  {
+    id: 'da-1',
+    title: 'Sales Performance Analysis',
+    track: 'Data Analytics',
+    difficulty: 'Beginner',
+    description:
+      'Analyze a sample sales dataset to identify revenue trends, top-performing products and monthly sales performance.',
+    objective:
+      'Transform raw transactional retail records into a structured performance summary that uncovers seasonal growth patterns, high-margin product categories, and underperforming regions.',
+    skills: ['Excel', 'Data cleaning', 'Data analysis', 'Visualization'],
+    tools: ['Microsoft Excel', 'Google Sheets'],
+    steps: [
+      'Inspect the raw sales dataset and clean missing values, duplicate entries, and inconsistent date formats.',
+      'Calculate key commercial metrics including total revenue, average order value (AOV), and month-over-month growth.',
+      'Use Pivot Tables to segment sales by product category, region, and sales representative.',
+      'Create clear bar, line, and combo charts illustrating monthly sales trajectories and top 10 products.',
+      'Compile key findings into a clean executive summary sheet with actionable recommendations.'
+    ],
+    deliverables: [
+      'Cleaned spreadsheet workbook with documented formulas and Pivot Tables',
+      'Visual chart dashboard summarizing monthly and product-level performance',
+      '1-page executive insights summary'
+    ],
+    expectedOutcome: 'A sales report containing meaningful insights and visual charts.',
+    estimatedTime: '3–5 days'
+  },
+  {
+    id: 'da-2',
+    title: 'Customer Segmentation',
+    track: 'Data Analytics',
+    difficulty: 'Intermediate',
+    description:
+      'Examine customer records and group customers based on purchasing behaviour, spending patterns and engagement.',
+    objective:
+      'Apply behavioral segmentation techniques (such as RFM: Recency, Frequency, Monetary analysis) to classify customers into distinct personas for targeted marketing campaigns.',
+    skills: ['Data cleaning', 'Segmentation', 'Analytical thinking', 'Visualization'],
+    tools: ['Excel', 'Python', 'Power BI'],
+    steps: [
+      'Audit customer demographic and order history tables to standardize customer IDs and purchase timestamps.',
+      'Compute Recency, Frequency, and Monetary (RFM) scores for each active customer.',
+      'Group customers into meaningful tiers (e.g., Champions, Loyal Customers, At-Risk, and Dormant).',
+      'Visualize segment distributions and revenue contributions across each customer group.',
+      'Draft tailored retention and upsell strategies for each identified segment.'
+    ],
+    deliverables: [
+      'Segmented customer dataset with RFM scores and cluster labels',
+      'Interactive charts comparing segment size vs. revenue contribution',
+      'Customer segmentation report with retention recommendations'
+    ],
+    expectedOutcome:
+      'A customer segmentation report with recommendations for improving customer engagement.',
+    estimatedTime: '5–7 days'
+  },
+  {
+    id: 'da-3',
+    title: 'Business Intelligence Dashboard',
+    track: 'Data Analytics',
+    difficulty: 'Advanced',
+    description:
+      'Develop an interactive dashboard that helps business managers monitor important performance indicators.',
+    objective:
+      'Design and build an executive-grade, multi-page Business Intelligence dashboard with dynamic slicers, drill-down views, and automated KPI variance tracking.',
+    skills: ['Data visualization', 'Dashboard development', 'Analytical reporting'],
+    tools: ['Power BI', 'Tableau'],
+    steps: [
+      'Model relational tables (Sales, Targets, Customers, and Products) using a clean star-schema architecture.',
+      'Write calculated fields/DAX measures for YoY growth, profit margin %, and target attainment.',
+      'Design an intuitive visual hierarchy featuring KPI cards, trend lines, and geographic breakdowns.',
+      'Configure interactive filters, cross-highlighting, and drill-through tooltips for department heads.',
+      'Validate data accuracy across all filter combinations and publish the final dashboard view.'
+    ],
+    deliverables: [
+      'Interactive BI dashboard file (.pbix or Tableau workbook)',
+      'Data model documentation explaining KPI formulas',
+      'Brief walkthrough guide for business stakeholders'
+    ],
+    expectedOutcome: 'A dashboard showing business KPIs, trends and performance summaries.',
+    estimatedTime: '7–10 days'
+  },
+  {
+    id: 'da-4',
+    title: 'Employee Data Analysis',
+    track: 'Data Analytics',
+    difficulty: 'Intermediate',
+    description:
+      'Analyze employee records to identify workforce trends, departmental distribution and employee retention patterns.',
+    objective:
+      'Evaluate HR workforce metrics to pinpoint attrition drivers, tenure distributions, and departmental headcount balance to support leadership planning.',
+    skills: ['Data cleaning', 'Descriptive statistics', 'Visualization'],
+    tools: ['Excel', 'Power BI'],
+    steps: [
+      'Clean HR employee records while anonymizing sensitive personal identifiers.',
+      'Calculate attrition rates, average tenure, and headcount distribution across departments and roles.',
+      'Analyze correlations between attrition and variables such as tenure, compensation bands, and promotion history.',
+      'Build visual charts highlighting retention trends and departmental turnover hotspots.',
+      'Summarize findings into practical HR retention recommendations.'
+    ],
+    deliverables: [
+      'Cleaned HR analytics workbook or Power BI report',
+      'Departmental headcount and attrition breakdown charts',
+      'Analytical HR summary report with data-backed recommendations'
+    ],
+    expectedOutcome: 'An analytical report with charts and recommendations.',
+    estimatedTime: '4–6 days'
+  },
+
+  // WEB DEVELOPMENT TRACK
+  {
+    id: 'wd-1',
+    title: 'Responsive Landing Page',
+    track: 'Web Development',
+    difficulty: 'Beginner',
+    description:
+      'Build a modern landing page for a fictional technology company using semantic HTML and CSS.',
+    objective:
+      'Translate a modern SaaS/technology brand concept into a fast, accessible, mobile-first landing page using clean semantic HTML5 landmarks and modern CSS layout techniques.',
+    skills: ['HTML5', 'CSS3', 'Responsive design', 'Layout'],
+    tools: ['VS Code', 'Web Browser'],
+    steps: [
+      'Structure the document using semantic HTML5 elements (<header>, <nav>, <main>, <section>, and <footer>).',
+      'Implement a cohesive color palette, typography scale, and reusable CSS custom properties.',
+      'Build a responsive hero banner, feature grid, testimonial block, and call-to-action section using Flexbox and CSS Grid.',
+      'Test and refine breakpoints across mobile (375px), tablet (768px), and desktop (1280px+) viewports.',
+      'Verify HTML validity, image alt attributes, and color contrast.'
+    ],
+    deliverables: [
+      'Semantic index.html file',
+      'Organized external stylesheet (style.css) with responsive media queries',
+      'Screenshots or live preview across mobile, tablet, and desktop views'
+    ],
+    expectedOutcome: 'A fully responsive landing page that works on mobile, tablet and desktop.',
+    estimatedTime: '2–3 days'
+  },
+  {
+    id: 'wd-2',
+    title: 'Personal Portfolio Website',
+    track: 'Web Development',
+    difficulty: 'Beginner',
+    description:
+      'Create a personal portfolio website showcasing your skills, projects, background and contact information.',
+    objective:
+      'Build a polished, recruiter-ready personal developer or analyst portfolio that highlights your technical capabilities, featured projects, and direct contact links.',
+    skills: ['HTML', 'CSS', 'Basic JavaScript'],
+    tools: ['VS Code', 'Web Browser'],
+    steps: [
+      'Plan the site architecture with About, Skills, Featured Projects, and Contact sections.',
+      'Build responsive project cards with live demo links, tech stack tags, and concise descriptions.',
+      'Add smooth scrolling navigation and a mobile-friendly navigation toggle using vanilla JavaScript.',
+      'Ensure clean typography, balanced whitespace, and accessible keyboard focus states.',
+      'Deploy or package the site so it can be easily shared with recruiters and mentors.'
+    ],
+    deliverables: [
+      'Complete multi-section portfolio website (HTML, CSS, JS)',
+      'At least 3 showcased project entries with clear descriptions',
+      'Responsive mobile and desktop layouts'
+    ],
+    expectedOutcome: 'A professional portfolio website that can be shared with recruiters.',
+    estimatedTime: '3–5 days'
+  },
+  {
+    id: 'wd-3',
+    title: 'Interactive Contact Form',
+    track: 'Web Development',
+    difficulty: 'Intermediate',
+    description:
+      'Build an interactive contact form with input validation, error messages and success feedback.',
+    objective:
+      'Engineer a user-friendly, accessible contact form powered by vanilla JavaScript that validates user inputs in real time and provides clear inline guidance.',
+    skills: ['JavaScript', 'DOM manipulation', 'Form validation', 'Event handling'],
+    tools: ['HTML', 'CSS', 'JavaScript'],
+    steps: [
+      'Create an accessible form layout with properly associated <label> elements and ARIA attributes.',
+      'Write JavaScript validation rules for full name, email format, subject selection, and minimum message length.',
+      'Display real-time, field-specific error messages and visual invalid/valid states on input and blur events.',
+      'Prevent invalid form submissions and render a dynamic confirmation banner upon successful validation.',
+      'Include a form reset flow so users can submit another inquiry seamlessly.'
+    ],
+    deliverables: [
+      'Interactive form interface with custom validation styling',
+      'Modular JavaScript validation and DOM feedback logic',
+      'Accessible error and success state announcements'
+    ],
+    expectedOutcome:
+      'A working contact form with client-side validation and a user-friendly interface.',
+    estimatedTime: '3–4 days'
+  },
+  {
+    id: 'wd-4',
+    title: 'Interactive Product Page',
+    track: 'Web Development',
+    difficulty: 'Advanced',
+    description:
+      'Develop a product page that allows visitors to explore product details, select options and interact with page elements.',
+    objective:
+      'Create a dynamic e-commerce product showcase with interactive image gallery switching, variant selectors (color/size/tier), live price updates, and cart state feedback.',
+    skills: ['HTML', 'CSS', 'JavaScript', 'DOM manipulation', 'Responsive design'],
+    tools: ['VS Code', 'Web Browser'],
+    steps: [
+      'Build a responsive two-column product showcase featuring an interactive thumbnail gallery and specification tabs.',
+      'Implement JavaScript state management for selecting product variants (e.g., color, storage/size, and quantity).',
+      'Dynamically update displayed pricing, stock availability badges, and selected summary details.',
+      'Add an interactive "Add to Cart" drawer or badge counter with quantity adjustments.',
+      'Ensure smooth animations, keyboard navigation support, and mobile responsiveness.'
+    ],
+    deliverables: [
+      'Complete interactive product page (HTML, CSS, JS)',
+      'Dynamic variant selection, gallery switcher, and cart summary logic',
+      'Responsive layout tested across desktop and mobile devices'
+    ],
+    expectedOutcome: 'A responsive product page with functional interactive elements.',
+    estimatedTime: '5–7 days'
+  }
+];
+
+/* ==========================================================================
+   2. Application Filter & Modal State
+   ========================================================================== */
+const state = {
+  selectedTrack: 'all',
+  selectedDifficulty: 'all',
+  searchQuery: '',
+  activeChallenge: null,
+  lastFocusedElement: null
+};
+
+/* ==========================================================================
+   3. DOM Element References
+   ========================================================================== */
+const elements = {
+  // Navigation
+  navToggle: document.getElementById('navToggle'),
+  navMenu: document.getElementById('navMenu'),
+  navLinks: document.querySelectorAll('.nav-link'),
+
+  // Controls & Filters
+  searchInput: document.getElementById('searchInput'),
+  clearSearchBtn: document.getElementById('clearSearchBtn'),
+  resetFiltersBtn: document.getElementById('resetFiltersBtn'),
+  emptyResetBtn: document.getElementById('emptyResetBtn'),
+  trackFilterBtns: document.querySelectorAll('#trackFilterGroup .filter-btn'),
+  difficultyFilterBtns: document.querySelectorAll('#difficultyFilterGroup .filter-btn'),
+  trackOverviewBtns: document.querySelectorAll('[data-filter-track]'),
+  footerTrackLinks: document.querySelectorAll('[data-footer-track]'),
+
+  // Grid & Counters
+  challengesGrid: document.getElementById('challengesGrid'),
+  emptyState: document.getElementById('emptyState'),
+  resultsCount: document.getElementById('resultsCount'),
+  activeFiltersSummary: document.getElementById('activeFiltersSummary'),
+  heroTotalCount: document.getElementById('heroTotalCount'),
+
+  // Modal Elements
+  modal: document.getElementById('challengeModal'),
+  modalContainer: document.getElementById('modalContainer'),
+  modalCloseBtn: document.getElementById('modalCloseBtn'),
+  modalCloseFooterBtn: document.getElementById('modalCloseFooterBtn'),
+  startChallengeBtn: document.getElementById('startChallengeBtn'),
+  modalBadges: document.getElementById('modalBadges'),
+  modalTitle: document.getElementById('modalTitle'),
+  modalTime: document.getElementById('modalTime'),
+  modalToolsText: document.getElementById('modalToolsText'),
+  modalDescription: document.getElementById('modalDescription'),
+  modalObjective: document.getElementById('modalObjective'),
+  modalSkills: document.getElementById('modalSkills'),
+  modalTools: document.getElementById('modalTools'),
+  modalSteps: document.getElementById('modalSteps'),
+  modalDeliverables: document.getElementById('modalDeliverables'),
+  modalOutcome: document.getElementById('modalOutcome'),
+
+  // Toast
+  toastNotification: document.getElementById('toastNotification'),
+  toastMessage: document.getElementById('toastMessage')
+};
+
+/* ==========================================================================
+   4. Helper Formatting Functions
+   ========================================================================== */
+function getTrackBadgeHTML(track) {
+  const isAnalytics = track === 'Data Analytics';
+  const badgeClass = isAnalytics ? 'badge-track-analytics' : 'badge-track-webdev';
+  const iconName = isAnalytics ? 'bar-chart-2' : 'code-2';
+
+  return `
+    <span class="badge ${badgeClass}">
+      <i data-lucide="${iconName}" aria-hidden="true"></i>
+      <span>${track}</span>
+    </span>
+  `;
 }
 
-.internship-task-btn i {
-    transition: transform 0.3s ease;
+function getDifficultyBadgeHTML(difficulty) {
+  const normalized = difficulty.toLowerCase();
+  return `
+    <span class="badge badge-diff-${normalized}">
+      ${difficulty}
+    </span>
+  `;
 }
 
-.internship-task-btn:hover i {
-    transform: translateX(4px);
+/* ==========================================================================
+   5. Filtering & Search Logic
+   ========================================================================== */
+function filterByTrack(challenges, track) {
+  if (track === 'all') return challenges;
+  return challenges.filter((challenge) => challenge.track === track);
 }
 
-
-
-/* ---Roadmap css --- */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+function filterByDifficulty(challenges, difficulty) {
+  if (difficulty === 'all') return challenges;
+  return challenges.filter((challenge) => challenge.difficulty === difficulty);
 }
 
-:root {
-  --obsidian: #09090b;
-  --obsidian-surface: #121216;
-  --obsidian-card: #18181c;
-  --gold: #d4af37;
-  --gold-hover: #b3922c;
-  --text-light: #f4f4f5;
-  --text-muted: #a1a1aa;
-  --border-luxury: rgba(212, 175, 55, 0.2);
-  --border-subtle: rgba(255, 255, 255, 0.08);
+function searchChallenges(challenges, query) {
+  const trimmedQuery = query.trim().toLowerCase();
+  if (!trimmedQuery) return challenges;
+
+  return challenges.filter((challenge) =>
+    challenge.title.toLowerCase().includes(trimmedQuery)
+  );
 }
 
-body {
-  background-color: var(--obsidian);
-  color: var(--text-light);
-  font-size: 1.05rem;
-  line-height: 1.7;
+function getFilteredChallenges() {
+  let filtered = [...challengesData];
+  filtered = filterByTrack(filtered, state.selectedTrack);
+  filtered = filterByDifficulty(filtered, state.selectedDifficulty);
+  filtered = searchChallenges(filtered, state.searchQuery);
+  return filtered;
 }
 
-.container {
-  max-width: 1320px;
-  margin: 0 auto;
-  padding: 0 2.5rem;
+/* ==========================================================================
+   6. Rendering & UI Updates
+   ========================================================================== */
+function updateChallengeCount(filteredCount, totalCount) {
+  elements.resultsCount.innerHTML = `
+    Showing <strong>${filteredCount}</strong> of <strong>${totalCount}</strong> challenges
+  `;
+
+  if (elements.heroTotalCount) {
+    elements.heroTotalCount.textContent = totalCount;
+  }
+
+  // Render active filter summary chips
+  const activeChips = [];
+  if (state.selectedTrack !== 'all') {
+    activeChips.push(`Track: ${state.selectedTrack}`);
+  }
+  if (state.selectedDifficulty !== 'all') {
+    activeChips.push(`Level: ${state.selectedDifficulty}`);
+  }
+  if (state.searchQuery.trim() !== '') {
+    activeChips.push(`Search: "${state.searchQuery.trim()}"`);
+  }
+
+  elements.activeFiltersSummary.innerHTML = activeChips
+    .map((chip) => `<span class="active-chip">${escapeHTML(chip)}</span>`)
+    .join('');
 }
 
-/* --- LUXURY HEADER --- */
-.header {
-  background: rgba(9, 9, 11, 0.85);
-  backdrop-filter: blur(16px);
-  border-bottom: 1px solid var(--border-subtle);
-  position: sticky;
-  top: 0;
-  z-index: 1000;
+function escapeHTML(str) {
+  const div = document.createElement('div');
+  div.textContent = str;
+  return div.innerHTML;
 }
 
-.nav-container {
-  max-width: 1320px;
-  margin: 0 auto;
-  padding: 1.25rem 2.5rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+function renderChallengeCards(challenges) {
+  const totalCount = challengesData.length;
+  updateChallengeCount(challenges.length, totalCount);
+
+  if (challenges.length === 0) {
+    elements.challengesGrid.innerHTML = '';
+    elements.challengesGrid.classList.add('hidden');
+    elements.emptyState.classList.remove('hidden');
+    refreshIcons();
+    return;
+  }
+
+  elements.emptyState.classList.add('hidden');
+  elements.challengesGrid.classList.remove('hidden');
+
+  elements.challengesGrid.innerHTML = challenges
+    .map(
+      (challenge, index) => `
+      <article class="challenge-card" style="animation-delay: ${index * 45}ms">
+        <div class="card-top">
+          <div class="card-badges">
+            ${getTrackBadgeHTML(challenge.track)}
+            ${getDifficultyBadgeHTML(challenge.difficulty)}
+          </div>
+          <h3 class="challenge-title">${escapeHTML(challenge.title)}</h3>
+          <p class="challenge-desc">${escapeHTML(challenge.description)}</p>
+          <p class="challenge-outcome">
+            <strong>Expected Outcome:</strong> ${escapeHTML(challenge.expectedOutcome)}
+          </p>
+        </div>
+        <div class="card-bottom">
+          <div class="challenge-meta">
+            <i data-lucide="clock" aria-hidden="true"></i>
+            <span>Estimated: <strong>${escapeHTML(challenge.estimatedTime)}</strong></span>
+          </div>
+          <button
+            type="button"
+            class="btn btn-view-challenge"
+            data-challenge-id="${challenge.id}"
+            aria-label="View details for ${escapeHTML(challenge.title)}"
+          >
+            <span>View Challenge</span>
+            <i data-lucide="arrow-right" aria-hidden="true"></i>
+          </button>
+        </div>
+      </article>
+    `
+    )
+    .join('');
+
+  refreshIcons();
 }
 
-.brand-text {
-  font-size: 1.5rem;
-  font-weight: 800;
-  color: #ffffff;
-  text-decoration: none;
-  letter-spacing: -0.01em;
+function applyAllFilters() {
+  const filteredChallenges = getFilteredChallenges();
+  renderChallengeCards(filteredChallenges);
 }
 
-.nav-menu {
-  display: flex;
-  gap: 2.5rem;
-  list-style: none;
+function syncFilterButtonsUI() {
+  elements.trackFilterBtns.forEach((btn) => {
+    const isSelected = btn.dataset.track === state.selectedTrack;
+    btn.classList.toggle('active', isSelected);
+    btn.setAttribute('aria-pressed', String(isSelected));
+  });
+
+  elements.difficultyFilterBtns.forEach((btn) => {
+    const isSelected = btn.dataset.difficulty === state.selectedDifficulty;
+    btn.classList.toggle('active', isSelected);
+    btn.setAttribute('aria-pressed', String(isSelected));
+  });
+
+  elements.searchInput.value = state.searchQuery;
+  elements.clearSearchBtn.classList.toggle('hidden', state.searchQuery.trim() === '');
 }
 
-.nav-link {
-  text-decoration: none;
-  color: var(--text-muted);
-  font-size: 1.05rem;
-  font-weight: 500;
-  transition: color 0.2s ease;
+function resetFilters() {
+  state.selectedTrack = 'all';
+  state.selectedDifficulty = 'all';
+  state.searchQuery = '';
+  syncFilterButtonsUI();
+  applyAllFilters();
 }
 
-.nav-link:hover {
-  color: var(--gold);
+/* ==========================================================================
+   7. Modal Management (Open, Populate, Close, Keyboard & Scroll Lock)
+   ========================================================================== */
+function openChallengeModal(challengeId) {
+  const challenge = challengesData.find((item) => item.id === challengeId);
+  if (!challenge) return;
+
+  state.activeChallenge = challenge;
+  state.lastFocusedElement = document.activeElement;
+
+  // Populate Header Badges & Title
+  elements.modalBadges.innerHTML = `
+    ${getTrackBadgeHTML(challenge.track)}
+    ${getDifficultyBadgeHTML(challenge.difficulty)}
+  `;
+  elements.modalTitle.textContent = challenge.title;
+  elements.modalTime.textContent = challenge.estimatedTime;
+  elements.modalToolsText.textContent = challenge.tools.join(', ');
+
+  // Populate Body Sections
+  elements.modalDescription.textContent = challenge.description;
+  elements.modalObjective.textContent = challenge.objective;
+  elements.modalOutcome.textContent = challenge.expectedOutcome;
+
+  // Populate Skills & Tools Tags
+  elements.modalSkills.innerHTML = challenge.skills
+    .map((skill) => `<span class="tag-item">${escapeHTML(skill)}</span>`)
+    .join('');
+
+  elements.modalTools.innerHTML = challenge.tools
+    .map((tool) => `<span class="tag-item">${escapeHTML(tool)}</span>`)
+    .join('');
+
+  // Populate Steps & Deliverables Lists
+  elements.modalSteps.innerHTML = challenge.steps
+    .map((step) => `<li>${escapeHTML(step)}</li>`)
+    .join('');
+
+  elements.modalDeliverables.innerHTML = challenge.deliverables
+    .map((item) => `<li>${escapeHTML(item)}</li>`)
+    .join('');
+
+  // Display Modal & Lock Background Scroll
+  elements.modal.classList.remove('hidden');
+  elements.modal.setAttribute('aria-hidden', 'false');
+  document.body.classList.add('modal-open');
+
+  // Reset scroll inside modal body to top
+  const modalBody = elements.modal.querySelector('.modal-body');
+  if (modalBody) modalBody.scrollTop = 0;
+
+  refreshIcons();
+  elements.modalCloseBtn.focus();
 }
 
-.nav-cta-group {
-  display: flex;
-  align-items: center;
-  gap: 1.25rem;
-}
+function closeChallengeModal() {
+  if (elements.modal.classList.contains('hidden')) return;
 
-.social-btn {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background: var(--obsidian-surface);
-  color: var(--text-light);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-decoration: none;
-  font-size: 1rem;
-  border: 1px solid var(--border-subtle);
-  transition: all 0.3s ease;
-}
+  elements.modal.classList.add('hidden');
+  elements.modal.setAttribute('aria-hidden', 'true');
+  document.body.classList.remove('modal-open');
+  state.activeChallenge = null;
 
-.social-btn:hover {
-  background: var(--gold);
-  color: var(--obsidian);
-  border-color: var(--gold);
-  transform: translateY(-3px);
-}
-
-.btn-luxury-outline {
-  background: transparent;
-  color: var(--text-light);
-  text-decoration: none;
-  padding: 0.75rem 1.75rem;
-  border-radius: 2rem;
-  font-size: 1rem;
-  font-weight: 600;
-  border: 1px solid var(--gold);
-  transition: all 0.3s ease;
-}
-
-.btn-luxury-outline:hover {
-  background: var(--gold);
-  color: var(--obsidian);
-  transform: translateY(-2px);
-}
-
-/* --- HERO SECTION --- */
-.hero-luxury {
-  background: radial-gradient(circle at 50% 20%, #1a1810 0%, var(--obsidian) 70%);
-  padding: 5rem 2.5rem 4rem 2.5rem;
-  text-align: center;
-  border-bottom: 1px solid var(--border-subtle);
-}
-
-.hero-container {
-  max-width: 900px;
-  margin: 0 auto;
-}
-
-.hero-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.6rem;
-  background: rgba(212, 175, 55, 0.1);
-  color: var(--gold);
-  padding: 0.5rem 1.25rem;
-  border-radius: 2rem;
-  font-size: 0.95rem;
-  font-weight: 600;
-  margin-bottom: 1.5rem;
-  border: 1px solid var(--border-luxury);
-}
-
-.hero-luxury h1 {
-  font-size: 3.25rem;
-  font-weight: 800;
-  color: #ffffff;
-  line-height: 1.15;
-  margin-bottom: 1.25rem;
-  letter-spacing: -0.02em;
-}
-
-.gold-text {
-  background: linear-gradient(135deg, #ffffff 20%, var(--gold) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.hero-subtitle {
-  font-size: 1.15rem;
-  color: var(--text-muted);
-  max-width: 700px;
-  margin: 0 auto;
-  line-height: 1.8;
-}
-
-/* --- DASHBOARD LAYOUT --- */
-.dashboard-main {
-  display: grid;
-  grid-template-columns: 320px 1fr;
-  gap: 2.5rem;
-  margin: 3.5rem auto 5rem;
-}
-
-/* Control Sidebar */
-.control-sidebar {
-  background: var(--obsidian-card);
-  border: 1px solid var(--border-subtle);
-  border-radius: 1rem;
-  padding: 1.75rem;
-  height: fit-content;
-}
-
-.control-sidebar h3 {
-  font-size: 0.9rem;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: var(--text-muted);
-  margin-bottom: 1rem;
-}
-
-.track-buttons {
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-  margin-bottom: 1.75rem;
-}
-
-.track-tab {
-  background: var(--obsidian-surface);
-  border: 1px solid var(--border-subtle);
-  color: var(--text-light);
-  font-size: 1rem;
-  font-weight: 600;
-  padding: 1rem 1.25rem;
-  border-radius: 0.75rem;
-  cursor: pointer;
-  text-align: left;
-  transition: all 0.2s ease;
-}
-
-.track-tab:hover {
-  background: rgba(212, 175, 55, 0.05);
-  border-color: var(--border-luxury);
-}
-
-.track-tab.active {
-  background: var(--gold);
-  color: var(--obsidian);
-  border-color: var(--gold);
-  font-weight: 700;
-  box-shadow: 0 8px 20px rgba(212, 175, 55, 0.2);
-}
-
-.track-info-card {
-  background: var(--obsidian-surface);
-  border-radius: 0.75rem;
-  padding: 1.25rem;
-  margin-bottom: 1.75rem;
-  border: 1px solid var(--border-subtle);
-}
-
-.info-label {
-  display: block;
-  font-size: 0.75rem;
-  text-transform: uppercase;
-  color: var(--text-muted);
-  font-weight: 700;
-  margin-bottom: 0.35rem;
-  letter-spacing: 0.05em;
-}
-
-.track-info-card h4 {
-  font-size: 1.1rem;
-  color: #ffffff;
-  margin-bottom: 0.5rem;
-}
-
-.track-info-card p {
-  font-size: 0.9rem;
-  color: var(--text-muted);
-}
-
-.timeline-summary h4 {
-  font-size: 0.85rem;
-  text-transform: uppercase;
-  color: var(--text-muted);
-  margin-bottom: 0.75rem;
-  letter-spacing: 0.05em;
-}
-
-.timeline-pills {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.4rem;
-}
-
-.timeline-pills span {
-  background: rgba(212, 175, 55, 0.1);
-  color: var(--gold);
-  font-size: 0.75rem;
-  font-weight: 600;
-  padding: 0.3rem 0.6rem;
-  border-radius: 4px;
-  border: 1px solid var(--border-luxury);
-}
-
-/* Workspace Content Area */
-.workspace-content {
-  background: var(--obsidian-card);
-  border: 1px solid var(--border-subtle);
-  border-radius: 1rem;
-  padding: 2.5rem;
-}
-
-.workspace-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  margin-bottom: 2rem;
-  padding-bottom: 1.25rem;
-  border-bottom: 1px solid var(--border-subtle);
-}
-
-.view-tag {
-  font-size: 0.75rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  color: var(--gold);
-  background: rgba(212, 175, 55, 0.1);
-  padding: 0.3rem 0.75rem;
-  border-radius: 4px;
-  letter-spacing: 0.05em;
-  border: 1px solid var(--border-luxury);
-}
-
-.workspace-header h2 {
-  font-size: 1.75rem;
-  color: #ffffff;
-  margin-top: 0.35rem;
-}
-
-.task-count-badge {
-  font-size: 0.85rem;
-  color: var(--text-muted);
-  background: var(--obsidian-surface);
-  padding: 0.5rem 1rem;
-  border-radius: 0.5rem;
-  border: 1px solid var(--border-subtle);
-}
-
-/* Roadmap Grid Layout */
-.roadmap-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1.25rem;
-}
-
-.task-card {
-  background: var(--obsidian-surface);
-  border: 1px solid var(--border-subtle);
-  border-radius: 0.75rem;
-  padding: 1.5rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease;
-}
-
-.task-card:hover {
-  transform: translateY(-4px);
-  border-color: var(--gold);
-  box-shadow: 0 10px 30px -10px rgba(212, 175, 55, 0.1);
-}
-
-.card-top {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 0.75rem;
-}
-
-.task-meta-num {
-  font-weight: 700;
-  font-size: 0.8rem;
-  color: var(--text-muted);
-  text-transform: uppercase;
-}
-
-.difficulty-badge {
-  font-size: 0.7rem;
-  font-weight: 700;
-  padding: 0.25rem 0.6rem;
-  border-radius: 999px;
-  text-transform: uppercase;
-}
-
-.diff-beginner {
-  background: rgba(34, 197, 94, 0.15);
-  color: #4ade80;
-  border: 1px solid rgba(34, 197, 94, 0.3);
-}
-
-.diff-transition {
-  background: rgba(234, 179, 8, 0.15);
-  color: #facc15;
-  border: 1px solid rgba(234, 179, 8, 0.3);
-}
-
-.diff-intermediate {
-  background: rgba(59, 130, 246, 0.15);
-  color: #60a5fa;
-  border: 1px solid rgba(59, 130, 246, 0.3);
-}
-
-.task-card h3 {
-  font-size: 1.15rem;
-  color: #ffffff;
-  margin-bottom: 0.4rem;
-}
-
-.task-day-tag {
-  font-size: 0.8rem;
-  font-weight: 700;
-  color: var(--gold);
-  margin-bottom: 0.75rem;
-  display: inline-block;
-}
-
-.task-card p {
-  font-size: 0.9rem;
-  color: var(--text-muted);
-  line-height: 1.6;
-}
-
-/* Footer */
-.footer {
-  text-align: center;
-  padding: 2.5rem 0;
-  color: var(--text-muted);
-  font-size: 0.9rem;
-  border-top: 1px solid var(--border-subtle);
-  background: var(--obsidian-surface);
-}
-
-/* Responsive Design */
-@media (max-width: 1024px) {
-  .dashboard-main {
-    grid-template-columns: 1fr;
+  if (state.lastFocusedElement && typeof state.lastFocusedElement.focus === 'function') {
+    state.lastFocusedElement.focus();
   }
 }
 
-@media (max-width: 640px) {
-  .roadmap-grid {
-    grid-template-columns: 1fr;
-  }
-  
-  .workspace-header {
-    flex-direction: column;
-    gap: 1rem;
-  }
+/* ==========================================================================
+   8. Mobile Navigation & Toast Feedback
+   ========================================================================== */
+function toggleMobileMenu() {
+  const isExpanded = elements.navToggle.getAttribute('aria-expanded') === 'true';
+  const nextState = !isExpanded;
+  elements.navToggle.setAttribute('aria-expanded', String(nextState));
+  elements.navMenu.classList.toggle('open', nextState);
+}
 
-  .nav-menu, .nav-cta-group {
-    display: none;
+function closeMobileMenu() {
+  elements.navToggle.setAttribute('aria-expanded', 'false');
+  elements.navMenu.classList.remove('open');
+}
+
+let toastTimeout;
+function showToast(message) {
+  elements.toastMessage.textContent = message;
+  elements.toastNotification.classList.remove('hidden');
+  refreshIcons();
+
+  clearTimeout(toastTimeout);
+  toastTimeout = setTimeout(() => {
+    elements.toastNotification.classList.add('hidden');
+  }, 3500);
+}
+
+function refreshIcons() {
+  if (window.lucide && typeof window.lucide.createIcons === 'function') {
+    window.lucide.createIcons();
   }
 }
+
+/* ==========================================================================
+   9. Event Listeners Registration
+   ========================================================================== */
+function initEventListeners() {
+  // Mobile Hamburger Menu
+  elements.navToggle.addEventListener('click', toggleMobileMenu);
+
+  elements.navLinks.forEach((link) => {
+    link.addEventListener('click', closeMobileMenu);
+  });
+
+  // Track Filter Buttons
+  elements.trackFilterBtns.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      state.selectedTrack = btn.dataset.track;
+      syncFilterButtonsUI();
+      applyAllFilters();
+    });
+  });
+
+  // Difficulty Filter Buttons
+  elements.difficultyFilterBtns.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      state.selectedDifficulty = btn.dataset.difficulty;
+      syncFilterButtonsUI();
+      applyAllFilters();
+    });
+  });
+
+  // Track Overview Cards & Footer Quick-Filter Links
+  elements.trackOverviewBtns.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      state.selectedTrack = btn.dataset.filterTrack;
+      syncFilterButtonsUI();
+      applyAllFilters();
+      document.getElementById('challenge-hub').scrollIntoView({ behavior: 'smooth' });
+    });
+  });
+
+  elements.footerTrackLinks.forEach((link) => {
+    link.addEventListener('click', () => {
+      state.selectedTrack = link.dataset.footerTrack;
+      syncFilterButtonsUI();
+      applyAllFilters();
+    });
+  });
+
+  // Real-time Search Input
+  elements.searchInput.addEventListener('input', (event) => {
+    state.searchQuery = event.target.value;
+    elements.clearSearchBtn.classList.toggle('hidden', state.searchQuery.trim() === '');
+    applyAllFilters();
+  });
+
+  // Clear Search Button
+  elements.clearSearchBtn.addEventListener('click', () => {
+    state.searchQuery = '';
+    elements.searchInput.value = '';
+    elements.clearSearchBtn.classList.add('hidden');
+    elements.searchInput.focus();
+    applyAllFilters();
+  });
+
+  // Reset Filters Buttons (Control Bar & Empty State)
+  elements.resetFiltersBtn.addEventListener('click', resetFilters);
+  elements.emptyResetBtn.addEventListener('click', resetFilters);
+
+  // Event Delegation for "View Challenge" Buttons inside Grid
+  elements.challengesGrid.addEventListener('click', (event) => {
+    const viewBtn = event.target.closest('.btn-view-challenge');
+    if (viewBtn) {
+      const challengeId = viewBtn.dataset.challengeId;
+      openChallengeModal(challengeId);
+    }
+  });
+
+  // Modal Close Controls
+  elements.modalCloseBtn.addEventListener('click', closeChallengeModal);
+  elements.modalCloseFooterBtn.addEventListener('click', closeChallengeModal);
+
+  // Close Modal when clicking outside modal container (on backdrop)
+  elements.modal.addEventListener('click', (event) => {
+    if (event.target === elements.modal) {
+      closeChallengeModal();
+    }
+  });
+
+  // Start Challenge Action inside Modal
+  elements.startChallengeBtn.addEventListener('click', () => {
+    if (!state.activeChallenge) return;
+    const title = state.activeChallenge.title;
+    closeChallengeModal();
+    showToast(`Started "${title}"! Good luck building your project.`);
+  });
+
+  // Global Escape Key Handler (Closes Modal or Mobile Menu)
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') {
+      if (!elements.modal.classList.contains('hidden')) {
+        closeChallengeModal();
+      } else if (elements.navMenu.classList.contains('open')) {
+        closeMobileMenu();
+      }
+    }
+  });
+}
+
+/* ==========================================================================
+   10. Initialize Application
+   ========================================================================== */
+document.addEventListener('DOMContentLoaded', () => {
+  initEventListeners();
+  applyAllFilters();
+  refreshIcons();
+});
