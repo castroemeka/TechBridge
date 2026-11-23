@@ -1,81 +1,65 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="TechBridge Interactive Intern Dashboard">
-  <title>TechBridge — Intern Dashboard</title>
-  <link rel="stylesheet" href="css/dashboard.css">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="TechBridge Interactive Intern Dashboard" name="description"/>
+<title>TechBridge — Intern Dashboard</title>
+<link href="css/dashboard.css" rel="stylesheet"/>
 </head>
 <body>
-  <header class="topbar">
-    <a class="brand" href="index.html" aria-label="TechBridge home"><img src="techbridge-logo-cropped.png" alt="TechBridge" class="brand-logo"></a>
-    <nav class="nav" aria-label="Primary navigation">
-      <a href="index.html">Home</a>
-      <a href="program.html">Program</a>
-      <a href="roadmap.html">Roadmap</a>
-      <a href="challenge.html">Challenges</a>
-      <a class="active" href="dashboard.html">Dashboard</a>
-    </nav>
-    <button class="menu-btn" id="menuBtn" aria-label="Open navigation">☰</button>
-  </header>
-
-  <main>
-    <section class="hero wrap">
-      <div>
-        <p class="eyebrow">INTERN DASHBOARD</p>
-        <h1>Welcome back, <span id="internName">Chukwuemeka</span>.</h1>
-        <p class="hero-copy">Your internship workspace for checking progress, completing tasks, exploring challenges and building a stronger understanding of modern web development.</p>
-      </div>
-      <div class="status-card">
-        <span class="status-dot"></span>
-        <div><small>Internship status</small><strong>In Progress</strong></div>
-      </div>
-    </section>
-
-    <section class="wrap progress-section">
-      <div class="section-heading"><div><p class="eyebrow">YOUR PROGRESS</p><h2>Internship Progress</h2></div><span id="progressText">0%</span></div>
-      <div class="progress-track" aria-label="Internship progress"><div id="progressBar" class="progress-fill"></div></div>
-      <div class="stats">
-        <div><strong id="completedCount">0</strong><span>Tasks completed</span></div>
-        <div><strong>8</strong><span>Total tasks</span></div>
-        <div><strong id="remainingCount">8</strong><span>Tasks remaining</span></div>
-      </div>
-    </section>
-
-    <section class="wrap tasks-section">
-      <div class="section-heading"><div><p class="eyebrow">TASK TRACKER</p><h2>Build your way through the internship.</h2></div></div>
-      <div class="filters" role="group" aria-label="Filter tasks">
-        <button class="filter active" data-filter="All">All</button><button class="filter" data-filter="Completed">Completed</button><button class="filter" data-filter="In Progress">In Progress</button><button class="filter" data-filter="Not Started">Not Started</button>
-      </div>
-      <div id="taskGrid" class="task-grid"></div>
-      <p id="emptyState" class="empty" hidden>No tasks match this filter.</p>
-    </section>
-
-    <section class="challenge-banner wrap">
-      <div><p class="eyebrow">TASK 5 CONNECTION</p><h2>Keep your problem-solving momentum going.</h2><p>Use the Challenge Hub to practise through focused frontend challenges and test what you have learned during the internship.</p></div>
-      <div class="challenge-side"><span>6 challenges available</span><a class="button light" href="challenge.html">Explore Challenges <span>↗</span></a></div>
-    </section>
-
-    <section class="wrap tech-section">
-      <div class="section-heading"><div><p class="eyebrow">KEEP LEARNING</p><h2>Modern Web Technologies</h2></div></div>
-      <div class="tech-layout">
-        <div class="tech-tabs" role="tablist" aria-label="Technology explorer">
-          <button class="tech-tab active" data-tech="next">Next.js</button><button class="tech-tab" data-tech="vue">Vue.js</button><button class="tech-tab" data-tech="angular">Angular</button><button class="tech-tab" data-tech="backend">Backend</button>
-        </div>
-        <article class="tech-panel" id="techPanel"></article>
-      </div>
-      <div class="backend-stack"><span>Node.js</span><span>Express.js</span><span>Django</span><span>Flask</span><span>Laravel</span><span>.NET</span></div>
-    </section>
-
-    <section class="wrap learning-note">
-      <div><p class="eyebrow">WHY THIS MATTERS</p><h2>From frontend screens to complete platforms.</h2></div>
-      <p>Modern web products are built from connected pieces. Frontend technologies create the interface people use, while backend technologies handle data, authentication, business rules and communication with databases and external services. Understanding how these parts work together helps you make better decisions as a developer.</p>
-    </section>
-  </main>
-
-  <div class="modal" id="taskModal" aria-hidden="true"><div class="modal-backdrop" data-close></div><section class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><button class="modal-close" data-close aria-label="Close">×</button><p class="eyebrow" id="modalNumber"></p><h2 id="modalTitle"></h2><p id="modalDescription"></p><div class="modal-details" id="modalDetails"></div></section></div>
-  <footer class="footer"><div class="wrap"><strong>TechBridge Intern Dashboard</strong><span>Learn. Build. Practise. Grow.</span></div></footer>
-  <script src="js/dashboard.js"></script>
+<header class="topbar"><a aria-label="TechBridge home" class="brand" href="index.html"><img alt="TechBridge" class="brand-logo" src="image/techbridge-logo.png"/></a><nav aria-label="Primary navigation" class="nav" id="dashboardNav"><a href="index.html">Home</a><a href="program.html">Programs</a><a href="roadmap.html">Roadmap</a><a href="experience.html">Internship Tasks</a><a href="challenge.html">Challenges</a><a href="dashboard.html">Dashboard</a></nav><button aria-controls="dashboardNav" aria-expanded="false" aria-label="Open navigation" class="menu-btn" id="menuBtn" type="button">☰</button></header>
+<main>
+<section class="hero wrap">
+<div>
+<p class="eyebrow">INTERN DASHBOARD</p>
+<h1>Welcome back, <span id="internName">Chukwuemeka</span>.</h1>
+<p class="hero-copy">Your internship workspace for checking progress, completing tasks, exploring challenges and building a stronger understanding of modern web development.</p>
+</div>
+<div class="status-card">
+<span class="status-dot"></span>
+<div><small>Internship status</small><strong>In Progress</strong></div>
+</div>
+</section>
+<section class="wrap progress-section">
+<div class="section-heading"><div><p class="eyebrow">YOUR PROGRESS</p><h2>Internship Progress</h2></div><span id="progressText">0%</span></div>
+<div aria-label="Internship progress" class="progress-track"><div class="progress-fill" id="progressBar"></div></div>
+<div class="stats">
+<div><strong id="completedCount">0</strong><span>Tasks completed</span></div>
+<div><strong>8</strong><span>Total tasks</span></div>
+<div><strong id="remainingCount">8</strong><span>Tasks remaining</span></div>
+</div>
+</section>
+<section class="wrap tasks-section">
+<div class="section-heading"><div><p class="eyebrow">TASK TRACKER</p><h2>Build your way through the internship.</h2></div></div>
+<div aria-label="Filter tasks" class="filters" role="group">
+<button class="filter active" data-filter="All">All</button><button class="filter" data-filter="Completed">Completed</button><button class="filter" data-filter="In Progress">In Progress</button><button class="filter" data-filter="Not Started">Not Started</button>
+</div>
+<div class="task-grid" id="taskGrid"></div>
+<p class="empty" hidden="" id="emptyState">No tasks match this filter.</p>
+</section>
+<section class="challenge-banner wrap">
+<div><p class="eyebrow">TASK 5 CONNECTION</p><h2>Keep your problem-solving momentum going.</h2><p>Use the Challenge Hub to practise through focused frontend challenges and test what you have learned during the internship.</p></div>
+<div class="challenge-side"><span>8 challenges available</span><a class="button light" href="challenge.html">Explore Challenges <span>↗</span></a></div>
+</section>
+<section class="wrap tech-section">
+<div class="section-heading"><div><p class="eyebrow">KEEP LEARNING</p><h2>Modern Web Technologies</h2></div></div>
+<div class="tech-layout">
+<div aria-label="Technology explorer" class="tech-tabs" role="tablist">
+<button class="tech-tab active" data-tech="next">Next.js</button><button class="tech-tab" data-tech="vue">Vue.js</button><button class="tech-tab" data-tech="angular">Angular</button><button class="tech-tab" data-tech="backend">Backend</button>
+</div>
+<article class="tech-panel" id="techPanel"></article>
+</div>
+<div class="backend-stack"><span>Node.js</span><span>Express.js</span><span>Django</span><span>Flask</span><span>Laravel</span><span>.NET</span></div>
+</section>
+<section class="wrap learning-note">
+<div><p class="eyebrow">WHY THIS MATTERS</p><h2>From frontend screens to complete platforms.</h2></div>
+<p>Modern web products are built from connected pieces. Frontend technologies create the interface people use, while backend technologies handle data, authentication, business rules and communication with databases and external services. Understanding how these parts work together helps you make better decisions as a developer.</p>
+</section>
+</main>
+<div aria-hidden="true" class="modal" id="taskModal"><div class="modal-backdrop" data-close=""></div><section aria-labelledby="modalTitle" aria-modal="true" class="modal-card" role="dialog"><button aria-label="Close" class="modal-close" data-close="">×</button><p class="eyebrow" id="modalNumber"></p><h2 id="modalTitle"></h2><p id="modalDescription"></p><div class="modal-details" id="modalDetails"></div></section></div>
+<footer class="footer"><div class="wrap"><strong>TechBridge Learning Platform</strong><span class="footer-nav-links"><a href="index.html">Home</a><a href="program.html">Programs</a><a href="roadmap.html">Roadmap</a><a href="experience.html">Internship Tasks</a><a href="challenge.html">Challenges</a><a href="dashboard.html">Dashboard</a></span></div></footer>
+<script src="js/dashboard.js"></script>
 </body>
 </html>
