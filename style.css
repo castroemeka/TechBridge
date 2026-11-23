@@ -3177,3 +3177,435 @@ button {
     gap: 28px;
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ========================================================================== 
+   Shared learning-platform navigation + responsive cleanup
+   ========================================================================== */
+.header .brand-logo-img,
+.navbar .brand-logo-img {
+  width: 62px;
+  height: 62px;
+  max-width: 62px;
+  object-fit: contain;
+  filter: none;
+}
+
+.header .nav-menu {
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.header .nav-link.active {
+  color: var(--gold);
+}
+
+.header .dashboard-nav-cta {
+  border-color: var(--gold);
+}
+
+.footer-learning-links {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-width: 160px;
+}
+
+.footer-learning-links h4 {
+  margin-bottom: 4px;
+}
+
+.footer-learning-links a {
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: color .2s ease;
+}
+
+.footer-learning-links a:hover {
+  color: var(--gold);
+}
+
+@media (max-width: 1180px) {
+  .nav-container {
+    padding-inline: 1.5rem;
+  }
+
+  .header .nav-menu {
+    gap: 1.15rem;
+  }
+
+  .header .nav-link {
+    font-size: 0.95rem;
+  }
+
+  .nav-cta-group {
+    gap: .6rem;
+  }
+
+  .nav-cta-group .social-btn {
+    display: none;
+  }
+}
+
+@media (max-width: 1020px) {
+  .header .nav-menu,
+  .header .nav-cta-group {
+    display: none;
+  }
+
+  .header .hamburger {
+    display: flex;
+  }
+
+  .header .nav-menu.active {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    padding: 1rem 1.25rem 1.25rem;
+    background: rgba(9, 9, 11, .98);
+    border-bottom: 1px solid var(--border-luxury);
+    box-shadow: 0 20px 40px rgba(0,0,0,.35);
+  }
+
+  .header .nav-menu.active .nav-link {
+    display: block;
+    width: 100%;
+    padding: .85rem .25rem;
+    border-bottom: 1px solid var(--border-subtle);
+  }
+
+  .header .nav-menu.active .nav-link:last-child {
+    border-bottom: 0;
+  }
+
+  .header .brand-logo-img {
+    width: 56px;
+    height: 56px;
+  }
+
+  .hero-luxury {
+    padding: 6rem 1.5rem 5rem;
+  }
+
+  .section-container {
+    padding-inline: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    font-size: 1rem;
+  }
+
+  .nav-container {
+    padding: .85rem 1rem;
+  }
+
+  .hero-luxury {
+    padding: 4.5rem 1rem 4rem;
+  }
+
+  .hero-luxury h1 {
+    font-size: clamp(2.4rem, 10vw, 4rem);
+  }
+
+  .hero-subtitle,
+  .center-header p,
+  .about-text p,
+  .luxury-card p,
+  .benefit-box p {
+    font-size: 1rem;
+  }
+
+  .section-container {
+    padding: 4.5rem 1rem;
+  }
+
+  .luxury-programs-grid,
+  .luxury-benefits-grid,
+  .about-luxury-grid,
+  .apply-grid-options {
+    grid-template-columns: 1fr;
+  }
+
+  .banner-flex {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .btn-whatsapp-luxury {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .footer-flex {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .footer-learning-links {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .header .brand-logo-img,
+  .navbar .brand-logo-img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .hero-cta-row,
+  .hero-cta-group {
+    width: 100%;
+  }
+
+  .hero-cta-row > a,
+  .hero-cta-group > a {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .luxury-card,
+  .benefit-box,
+  .about-card-box,
+  .apply-luxury-box {
+    padding: 2rem 1.25rem;
+  }
+}
+
+
+/* ==========================================================================
+   FINAL MOBILE NAVIGATION FIX
+   This block intentionally comes last so older page-specific navigation rules
+   cannot override the working mobile menu state.
+   ========================================================================== */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 3000;
+}
+
+.header .nav-container {
+  position: relative;
+}
+
+.header .hamburger {
+  position: relative;
+  z-index: 3002;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  width: 46px;
+  height: 46px;
+  min-width: 46px;
+  padding: 0;
+  margin-left: auto;
+  color: var(--gold);
+  border: 1px solid var(--border-luxury);
+  border-radius: 10px;
+  background: rgba(9, 9, 11, .96);
+  cursor: pointer;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+  pointer-events: auto;
+}
+
+.header .hamburger span {
+  width: 24px;
+  height: 2px;
+  display: block;
+  background: var(--gold);
+  border-radius: 2px;
+  transition: transform .2s ease, opacity .2s ease;
+}
+
+.header .hamburger {
+  gap: 5px;
+}
+
+.header .nav-menu {
+  position: relative;
+  z-index: 3001;
+}
+
+@media (max-width: 1020px) {
+  .header .nav-menu,
+  .header .nav-cta-group {
+    display: none !important;
+  }
+
+  .header .hamburger {
+    display: inline-flex !important;
+  }
+
+  .header .nav-menu.active {
+    position: absolute !important;
+    top: 100% !important;
+    left: 0 !important;
+    right: 0 !important;
+    width: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 0 !important;
+    padding: 10px 18px 18px !important;
+    margin: 0 !important;
+    background: rgba(9, 9, 11, .985) !important;
+    border-bottom: 1px solid var(--border-luxury) !important;
+    box-shadow: 0 18px 45px rgba(0,0,0,.45) !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: none !important;
+    pointer-events: auto !important;
+  }
+
+  .header .nav-menu.active .nav-link {
+    display: block !important;
+    width: 100% !important;
+    padding: 14px 6px !important;
+    margin: 0 !important;
+    font-size: 1rem !important;
+    border-bottom: 1px solid var(--border-subtle) !important;
+  }
+
+  .header .nav-menu.active .nav-link:last-child {
+    border-bottom: 0 !important;
+  }
+
+  .header .hamburger[aria-expanded="true"] span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+  }
+
+  .header .hamburger[aria-expanded="true"] span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .header .hamburger[aria-expanded="true"] span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+  }
+
+  body.mobile-nav-open {
+    overflow-x: hidden;
+  }
+}
+
+@media (max-width: 600px) {
+  .header .nav-container {
+    min-height: 70px;
+    padding: 10px 14px;
+  }
+
+  .header .brand-logo-img {
+    width: 50px !important;
+    height: 50px !important;
+  }
+
+  .header .hamburger {
+    width: 44px;
+    height: 44px;
+    min-width: 44px;
+  }
+
+  .header .nav-menu.active {
+    padding-left: 14px !important;
+    padding-right: 14px !important;
+  }
+}
+
+@media (min-width: 1021px) {
+  .header .hamburger {
+    display: none !important;
+  }
+
+  .header .nav-menu {
+    display: flex !important;
+    position: relative !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: none !important;
+  }
+
+  body.mobile-nav-open {
+    overflow-x: visible;
+  }
+}
+
+/* Challenge Hub uses its own navbar markup and navToggle/open state. */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 3000;
+}
+
+.navbar .nav-container {
+  position: relative;
+}
+
+.navbar .nav-toggle {
+  position: relative;
+  z-index: 3002;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+  pointer-events: auto;
+}
+
+@media (max-width: 1080px) {
+  .navbar .nav-toggle {
+    display: inline-flex !important;
+  }
+
+  .navbar .nav-menu.open {
+    z-index: 3001;
+    pointer-events: auto;
+  }
+}
+
+@media (min-width: 1081px) {
+  .navbar .nav-toggle {
+    display: none !important;
+  }
+}
