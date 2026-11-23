@@ -1,148 +1,125 @@
 <!DOCTYPE html>
+
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="TechBridge Challenge Hub – Explore practical Data Analytics and Web Development challenges for the 30-day TechBridge internship by Baselink Services Limited." />
-  <title>TechBridge Challenge Hub | Internship Tasks & Challenges</title>
-
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <meta
+    content="TechBridge Challenge Hub – Explore practical Data Analytics and Web Development challenges for the 30-day TechBridge internship by Baselink Services Limited."
+    name="description" />
+  <title>TechBridge Challenge Hub | Internship Tasks &amp; Challenges</title>
   <!-- Google Fonts: Plus Jakarta Sans & Inter -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet" />
-
+  <link href="https://fonts.googleapis.com" rel="preconnect" />
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700;800&amp;display=swap"
+    rel="stylesheet" />
   <!-- Font Awesome & Lucide Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
   <script src="https://unpkg.com/lucide@latest"></script>
-
   <!-- Custom Stylesheet -->
-  <link rel="stylesheet" href="style.css" />
+  <link href="style.css" rel="stylesheet" />
+
 </head>
+
 <body>
   <!-- Skip to Main Content for Keyboard Accessibility -->
-  <a href="#challenge-hub" class="skip-link">Skip to Challenge Hub</a>
-
+  <a class="skip-link" href="#challenge-hub">Skip to Challenge Hub</a>
   <!-- ==================== NAVIGATION BAR ==================== -->
   <header class="navbar" id="navbar">
     <div class="container nav-container">
-      <a href="index.html" class="brand-logo" aria-label="TechBridge Home">
-        <img
-          src="./image/techbridge-logo.png"
-          alt="TechBridge Logo"
-          class="brand-logo-img"
+      <a aria-label="TechBridge Home" class="brand-logo" href="index.html">
+        <img alt="TechBridge Logo" class="brand-logo-img"
           onerror="this.style.display='none'; document.getElementById('logoFallbackIcon').style.display='inline-flex';"
-        />
-        <span id="logoFallbackIcon" class="logo-icon" style="display: none;">
-          <i data-lucide="layers" aria-hidden="true"></i>
+          src="./image/techbridge-logo.png" />
+        <span class="logo-icon" id="logoFallbackIcon" style="display: none;">
+          <i aria-hidden="true" data-lucide="layers"></i>
         </span>
         <span class="logo-text">Tech<span class="logo-gold">Bridge</span></span>
       </a>
-
       <!-- Mobile Hamburger Toggle -->
-      <button
-        type="button"
-        class="nav-toggle"
-        id="navToggle"
-        aria-label="Toggle navigation menu"
-        aria-expanded="false"
-        aria-controls="navMenu"
-      >
-        <i data-lucide="menu" class="icon-menu" aria-hidden="true"></i>
-        <i data-lucide="x" class="icon-close" aria-hidden="true"></i>
+      <button aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation menu" class="nav-toggle"
+        id="navToggle" type="button">
+        <i aria-hidden="true" class="icon-menu" data-lucide="menu"></i>
+        <i aria-hidden="true" class="icon-close" data-lucide="x"></i>
       </button>
-
       <!-- Navigation Links & CTA -->
-      <nav class="nav-menu" id="navMenu" aria-label="Primary Navigation">
+      <nav aria-label="Primary Navigation" class="nav-menu" id="navMenu">
         <ul class="nav-list">
-          <li><a href="index.html" class="nav-link">Home</a></li>
-          <li><a href="program.html" class="nav-link">Programs</a></li>
-          <li><a href="experience.html" class="nav-link">Internship Tasks</a></li>
-          <li><a href="#challenge-hub" class="nav-link active" aria-current="page">Challenges</a></li>
-          <li><a href="#tracks-section" class="nav-link">About Us</a></li>
-          <li><a href="#footer" class="nav-link">Community</a></li>
+          <li><a class="nav-link" href="index.html">Home</a></li>
+          <li><a class="nav-link" href="program.html">Programs</a></li>
+          <li><a class="nav-link" href="roadmap.html">Roadmap</a></li>
+          <li><a class="nav-link" href="experience.html">Internship Tasks</a></li>
+          <li><a aria-current="page" class="nav-link active" href="challenge.html">Challenges</a></li>
+          <li><a class="nav-link" href="dashboard.html">Dashboard</a></li>
         </ul>
         <div class="nav-actions">
-          <a
-            href="https://www.linkedin.com/company/techbridge-services/"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="social-icon-btn"
-            aria-label="TechBridge on LinkedIn"
-          >
-            <i class="fab fa-linkedin-in" aria-hidden="true"></i>
+          <a aria-label="TechBridge on LinkedIn" class="social-icon-btn"
+            href="https://www.linkedin.com/company/techbridge-services/" rel="noopener noreferrer" target="_blank">
+            <i aria-hidden="true" class="fab fa-linkedin-in"></i>
           </a>
-          <a
-            href="https://www.facebook.com/p/Baselink-Services-100066771475783/"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="social-icon-btn"
-            aria-label="Baselink Services on Facebook"
-          >
-            <i class="fab fa-facebook-f" aria-hidden="true"></i>
+          <a aria-label="Baselink Services on Facebook" class="social-icon-btn"
+            href="https://www.facebook.com/p/Baselink-Services-100066771475783/" rel="noopener noreferrer"
+            target="_blank">
+            <i aria-hidden="true" class="fab fa-facebook-f"></i>
           </a>
-          <a
-            href="https://forms.gle/8EbdSy5ttGfLZfjv5?utm_source=chatgpt.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="btn btn-gold btn-nav"
-          >
+          <a class="btn btn-gold btn-nav" href="https://forms.gle/8EbdSy5ttGfLZfjv5?utm_source=chatgpt.com"
+            rel="noopener noreferrer" target="_blank">
             Join TechBridge
           </a>
         </div>
       </nav>
     </div>
   </header>
-
   <main id="top">
     <!-- ==================== HERO SECTION ==================== -->
-    <section class="hero" aria-labelledby="hero-heading">
-      <div class="hero-bg-grid" aria-hidden="true"></div>
-      <div class="hero-glow hero-glow-1" aria-hidden="true"></div>
-      <div class="hero-glow hero-glow-2" aria-hidden="true"></div>
-
+    <section aria-labelledby="hero-heading" class="hero">
+      <div aria-hidden="true" class="hero-bg-grid"></div>
+      <div aria-hidden="true" class="hero-glow hero-glow-1"></div>
+      <div aria-hidden="true" class="hero-glow hero-glow-2"></div>
       <div class="container hero-grid">
         <div class="hero-content">
           <div class="hero-badge">
-            <i data-lucide="sparkles" aria-hidden="true"></i>
+            <i aria-hidden="true" data-lucide="sparkles"></i>
             <span>TechBridge Challenge Hub • 30-Day Internship</span>
           </div>
-          <h1 id="hero-heading" class="hero-title">
+          <h1 class="hero-title" id="hero-heading">
             Explore. Practice.<br />
             <span class="text-gradient">Build. Grow.</span>
           </h1>
           <p class="hero-description">
-            Explore practical challenges designed to help TechBridge interns apply their skills and gain real-world experience. Turn your knowledge into hands-on projects across Data Analytics and Web Development.
+            Explore practical challenges designed to help TechBridge interns apply their skills and gain real-world
+            experience. Turn your knowledge into hands-on projects across Data Analytics and Web Development.
           </p>
           <div class="hero-cta-group">
-            <a href="#challenge-hub" class="btn btn-gold btn-lg">
+            <a class="btn btn-gold btn-lg" href="#challenge-hub">
               <span>Explore Challenges</span>
-              <i data-lucide="arrow-right" aria-hidden="true"></i>
+              <i aria-hidden="true" data-lucide="arrow-right"></i>
             </a>
-            <a href="#tracks-section" class="btn btn-outline-light btn-lg">
+            <a class="btn btn-outline-light btn-lg" href="#tracks-section">
               <span>Explore Learning Tracks</span>
             </a>
           </div>
-
           <div class="hero-metrics">
             <div class="metric-item">
               <span class="metric-value">2</span>
               <span class="metric-label">Core Tracks</span>
             </div>
-            <div class="metric-divider" aria-hidden="true"></div>
+            <div aria-hidden="true" class="metric-divider"></div>
             <div class="metric-item">
               <span class="metric-value" id="heroTotalCount">8</span>
               <span class="metric-label">Practical Challenges</span>
             </div>
-            <div class="metric-divider" aria-hidden="true"></div>
+            <div aria-hidden="true" class="metric-divider"></div>
             <div class="metric-item">
               <span class="metric-value">30 Days</span>
               <span class="metric-label">Practical Internship</span>
             </div>
           </div>
         </div>
-
         <!-- Decorative Tech UI Illustration -->
-        <div class="hero-visual" aria-hidden="true">
+        <div aria-hidden="true" class="hero-visual">
           <div class="floating-card code-preview-card">
             <div class="window-header">
               <span class="dot dot-red"></span>
@@ -151,14 +128,15 @@
               <span class="window-title">techbridge-challenge-hub.js</span>
             </div>
             <div class="window-body">
-              <div class="code-line"><span class="c-keyword">const</span> <span class="c-var">hub</span> = <span class="c-func">createChallengeHub</span>({</div>
+              <div class="code-line"><span class="c-keyword">const</span> <span class="c-var">hub</span> = <span
+                  class="c-func">createChallengeHub</span>({</div>
               <div class="code-line indent">organization: <span class="c-str">'TechBridge by Baselink'</span>,</div>
-              <div class="code-line indent">tracks: [<span class="c-str">'Data Analytics'</span>, <span class="c-str">'Web Dev'</span>],</div>
+              <div class="code-line indent">tracks: [<span class="c-str">'Data Analytics'</span>, <span
+                  class="c-str">'Web Dev'</span>],</div>
               <div class="code-line indent">interactive: <span class="c-bool">true</span></div>
               <div class="code-line">});</div>
             </div>
           </div>
-
           <div class="floating-card analytics-preview-card">
             <div class="mini-card-header">
               <div class="mini-icon-box">
@@ -166,7 +144,7 @@
               </div>
               <div>
                 <p class="mini-title">Real-World Deliverables</p>
-                <p class="mini-subtitle">Portfolio & Skill Growth</p>
+                <p class="mini-subtitle">Portfolio &amp; Skill Growth</p>
               </div>
             </div>
             <div class="mini-bars">
@@ -180,30 +158,29 @@
         </div>
       </div>
     </section>
-
     <!-- ==================== TRACK OVERVIEW SECTION ==================== -->
-    <section class="tracks-section" id="tracks-section" aria-labelledby="tracks-heading">
+    <section aria-labelledby="tracks-heading" class="tracks-section" id="tracks-section">
       <div class="container">
         <div class="section-header centered">
           <span class="section-eyebrow">Bridging Learning to Real-World Experience</span>
-          <h2 id="tracks-heading" class="section-title">TechBridge Learning Tracks</h2>
+          <h2 class="section-title" id="tracks-heading">TechBridge Learning Tracks</h2>
           <p class="section-subtitle">
             Browse realistic challenges tailored to each track so you know what you will build during the internship.
           </p>
         </div>
-
         <div class="tracks-grid">
           <!-- Track Card 1: Data Analytics -->
           <article class="track-card track-analytics" data-track-select="Data Analytics">
             <div class="track-card-top">
               <div class="track-icon-wrapper analytics-icon">
-                <i data-lucide="bar-chart-3" aria-hidden="true"></i>
+                <i aria-hidden="true" data-lucide="bar-chart-3"></i>
               </div>
               <span class="track-tag">4 Challenges</span>
             </div>
             <h3 class="track-title">Data Analytics</h3>
             <p class="track-description">
-              Learn how to transform raw data into meaningful insights through data cleaning, analysis, visualization and reporting.
+              Learn how to transform raw data into meaningful insights through data cleaning, analysis, visualization
+              and reporting.
             </p>
             <div class="track-footer">
               <div class="track-tools">
@@ -212,18 +189,17 @@
                 <span>Python</span>
                 <span>Power BI</span>
               </div>
-              <button type="button" class="track-link-btn" data-filter-track="Data Analytics">
+              <button class="track-link-btn" data-filter-track="Data Analytics" type="button">
                 <span>Filter Data Analytics</span>
-                <i data-lucide="arrow-up-right" aria-hidden="true"></i>
+                <i aria-hidden="true" data-lucide="arrow-up-right"></i>
               </button>
             </div>
           </article>
-
           <!-- Track Card 2: Web Development -->
           <article class="track-card track-webdev" data-track-select="Web Development">
             <div class="track-card-top">
               <div class="track-icon-wrapper webdev-icon">
-                <i data-lucide="code-2" aria-hidden="true"></i>
+                <i aria-hidden="true" data-lucide="code-2"></i>
               </div>
               <span class="track-tag">4 Challenges</span>
             </div>
@@ -238,150 +214,133 @@
                 <span>JavaScript</span>
                 <span>Responsive UI</span>
               </div>
-              <button type="button" class="track-link-btn" data-filter-track="Web Development">
+              <button class="track-link-btn" data-filter-track="Web Development" type="button">
                 <span>Filter Web Development</span>
-                <i data-lucide="arrow-up-right" aria-hidden="true"></i>
+                <i aria-hidden="true" data-lucide="arrow-up-right"></i>
               </button>
             </div>
           </article>
         </div>
       </div>
     </section>
-
     <!-- ==================== CHALLENGE HUB SECTION ==================== -->
-    <section class="hub-section" id="challenge-hub" aria-labelledby="hub-heading">
+    <section aria-labelledby="hub-heading" class="hub-section" id="challenge-hub">
       <div class="container">
         <div class="section-header centered">
           <span class="section-eyebrow">Interactive Challenge Explorer</span>
-          <h2 id="hub-heading" class="section-title">Discover Your Next Challenge</h2>
+          <h2 class="section-title" id="hub-heading">Discover Your Next Challenge</h2>
           <p class="section-subtitle">
-            Filter by track or difficulty, search by name, and click any challenge to view full details without refreshing the page.
+            Filter by track or difficulty, search by name, and click any challenge to view full details without
+            refreshing the page.
           </p>
         </div>
-
         <!-- Filter & Search Control Panel -->
-        <div class="controls-panel" role="region" aria-label="Challenge Filters and Search">
+        <div aria-label="Challenge Filters and Search" class="controls-panel" role="region">
           <!-- Search Bar Row -->
           <div class="search-row">
             <div class="search-input-wrapper">
-              <label for="searchInput" class="sr-only">Search challenges by name</label>
-              <i data-lucide="search" class="search-icon" aria-hidden="true"></i>
-              <input
-                type="search"
-                id="searchInput"
-                class="search-input"
-                placeholder="Search challenges by name..."
-                autocomplete="off"
-              />
-              <button
-                type="button"
-                id="clearSearchBtn"
-                class="clear-search-btn hidden"
-                aria-label="Clear search text"
-              >
-                <i data-lucide="x" aria-hidden="true"></i>
+              <label class="sr-only" for="searchInput">Search challenges by name</label>
+              <i aria-hidden="true" class="search-icon" data-lucide="search"></i>
+              <input autocomplete="off" class="search-input" id="searchInput" placeholder="Search challenges by name..."
+                type="search" />
+              <button aria-label="Clear search text" class="clear-search-btn hidden" id="clearSearchBtn" type="button">
+                <i aria-hidden="true" data-lucide="x"></i>
               </button>
             </div>
-
-            <button type="button" id="resetFiltersBtn" class="btn btn-reset">
-              <i data-lucide="rotate-ccw" aria-hidden="true"></i>
+            <button class="btn btn-reset" id="resetFiltersBtn" type="button">
+              <i aria-hidden="true" data-lucide="rotate-ccw"></i>
               <span>Reset Filters</span>
             </button>
           </div>
-
           <!-- Track & Difficulty Filter Buttons -->
           <div class="filters-row">
             <!-- Track Filter Group -->
-            <div class="filter-group" role="group" aria-labelledby="trackFilterLabel">
-              <span id="trackFilterLabel" class="filter-label">Track:</span>
+            <div aria-labelledby="trackFilterLabel" class="filter-group" role="group">
+              <span class="filter-label" id="trackFilterLabel">Track:</span>
               <div class="filter-pills" id="trackFilterGroup">
-                <button type="button" class="filter-btn active" data-track="all" aria-pressed="true">
+                <button aria-pressed="true" class="filter-btn active" data-track="all" type="button">
                   All
                 </button>
-                <button type="button" class="filter-btn" data-track="Data Analytics" aria-pressed="false">
-                  <i data-lucide="bar-chart-2" aria-hidden="true"></i>
+                <button aria-pressed="false" class="filter-btn" data-track="Data Analytics" type="button">
+                  <i aria-hidden="true" data-lucide="bar-chart-2"></i>
                   <span>Data Analytics</span>
                 </button>
-                <button type="button" class="filter-btn" data-track="Web Development" aria-pressed="false">
-                  <i data-lucide="laptop" aria-hidden="true"></i>
+                <button aria-pressed="false" class="filter-btn" data-track="Web Development" type="button">
+                  <i aria-hidden="true" data-lucide="laptop"></i>
                   <span>Web Development</span>
                 </button>
               </div>
             </div>
-
             <!-- Difficulty Filter Group -->
-            <div class="filter-group" role="group" aria-labelledby="difficultyFilterLabel">
-              <span id="difficultyFilterLabel" class="filter-label">Difficulty:</span>
+            <div aria-labelledby="difficultyFilterLabel" class="filter-group" role="group">
+              <span class="filter-label" id="difficultyFilterLabel">Difficulty:</span>
               <div class="filter-pills" id="difficultyFilterGroup">
-                <button type="button" class="filter-btn active" data-difficulty="all" aria-pressed="true">
+                <button aria-pressed="true" class="filter-btn active" data-difficulty="all" type="button">
                   All
                 </button>
-                <button type="button" class="filter-btn" data-difficulty="Beginner" aria-pressed="false">
+                <button aria-pressed="false" class="filter-btn" data-difficulty="Beginner" type="button">
                   Beginner
                 </button>
-                <button type="button" class="filter-btn" data-difficulty="Intermediate" aria-pressed="false">
+                <button aria-pressed="false" class="filter-btn" data-difficulty="Intermediate" type="button">
                   Intermediate
                 </button>
-                <button type="button" class="filter-btn" data-difficulty="Advanced" aria-pressed="false">
+                <button aria-pressed="false" class="filter-btn" data-difficulty="Advanced" type="button">
                   Advanced
                 </button>
               </div>
             </div>
           </div>
         </div>
-
         <!-- Results Status Bar -->
-        <div class="results-bar" aria-live="polite">
+        <div aria-live="polite" class="results-bar">
           <p class="results-count" id="resultsCount">
             Showing <strong>8</strong> of <strong>8</strong> challenges
           </p>
           <div class="active-filters-summary" id="activeFiltersSummary"></div>
         </div>
-
         <!-- Challenge Cards Grid -->
         <div class="challenges-grid" id="challengesGrid">
           <!-- Populated dynamically via JavaScript -->
         </div>
-
         <!-- Empty State (Hidden by default) -->
         <div class="empty-state hidden" id="emptyState" role="status">
           <div class="empty-state-icon">
-            <i data-lucide="search-x" aria-hidden="true"></i>
+            <i aria-hidden="true" data-lucide="search-x"></i>
           </div>
           <h3>No challenges found</h3>
           <p>
             No challenges matched your current search or filter selection. Try another keyword or reset your filters.
           </p>
-          <button type="button" class="btn btn-gold" id="emptyResetBtn">
-            <i data-lucide="rotate-ccw" aria-hidden="true"></i>
+          <button class="btn btn-gold" id="emptyResetBtn" type="button">
+            <i aria-hidden="true" data-lucide="rotate-ccw"></i>
             <span>Reset All Filters</span>
           </button>
         </div>
       </div>
     </section>
   </main>
-
   <!-- ==================== FOOTER ==================== -->
   <footer class="footer" id="footer">
+    <div class="footer-learning-links">
+      <h4>Learning Hub</h4><a href="roadmap.html">Roadmap</a><a href="experience.html">Internship Tasks</a><a
+        href="dashboard.html">Dashboard</a>
+    </div>
     <div class="container footer-grid">
       <div class="footer-brand">
-        <a href="index.html" class="brand-logo">
-          <img
-            src="./image/techbridge-logo.png"
-            alt="TechBridge Logo"
-            class="footer-logo-img"
+        <a class="brand-logo" href="index.html">
+          <img alt="TechBridge Logo" class="footer-logo-img"
             onerror="this.style.display='none'; document.getElementById('footerLogoFallback').style.display='inline-flex';"
-          />
-          <span id="footerLogoFallback" class="logo-icon" style="display: none;">
-            <i data-lucide="layers" aria-hidden="true"></i>
+            src="./image/techbridge-logo.png" />
+          <span class="logo-icon" id="footerLogoFallback" style="display: none;">
+            <i aria-hidden="true" data-lucide="layers"></i>
           </span>
           <span class="logo-text">Tech<span class="logo-gold">Bridge</span></span>
         </a>
         <p class="footer-tagline">
-          TechBridge by Baselink Services Limited. Bridging Learning to Real-World Experience through a 30-Day Practical Internship.
+          TechBridge by Baselink Services Limited. Bridging Learning to Real-World Experience through a 30-Day Practical
+          Internship.
         </p>
       </div>
-
       <div class="footer-links">
         <h4>Navigation</h4>
         <ul>
@@ -391,167 +350,130 @@
           <li><a href="#challenge-hub">Challenge Hub</a></li>
         </ul>
       </div>
-
       <div class="footer-links">
-        <h4>Tracks & Community</h4>
+        <h4>Tracks &amp; Community</h4>
         <ul>
-          <li><a href="#challenge-hub" data-footer-track="Data Analytics">Data Analytics Challenges</a></li>
-          <li><a href="#challenge-hub" data-footer-track="Web Development">Web Development Challenges</a></li>
+          <li><a data-footer-track="Data Analytics" href="#challenge-hub">Data Analytics Challenges</a></li>
+          <li><a data-footer-track="Web Development" href="#challenge-hub">Web Development Challenges</a></li>
           <li>
-            <a
-              href="https://chat.whatsapp.com/FqpBvYS4oaK32cXDxc8JIS?utm_source=chatgpt.com"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a href="https://chat.whatsapp.com/FqpBvYS4oaK32cXDxc8JIS?utm_source=chatgpt.com" rel="noopener noreferrer"
+              target="_blank">
               WhatsApp Community
             </a>
           </li>
           <li>
-            <a
-              href="https://forms.gle/8EbdSy5ttGfLZfjv5?utm_source=chatgpt.com"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a href="https://forms.gle/8EbdSy5ttGfLZfjv5?utm_source=chatgpt.com" rel="noopener noreferrer"
+              target="_blank">
               Internship Application Form
             </a>
           </li>
         </ul>
       </div>
-
       <div class="footer-contact">
-        <h4>Contact & Socials</h4>
+        <h4>Contact &amp; Socials</h4>
         <p>Reach out to TechBridge for internship inquiries and updates:</p>
-        <a href="mailto:techbridgebaslink@gmail.com" class="footer-email">
-          <i data-lucide="mail" aria-hidden="true"></i>
+        <a class="footer-email" href="mailto:techbridgebaslink@gmail.com">
+          <i aria-hidden="true" data-lucide="mail"></i>
           <span>techbridgebaslink@gmail.com</span>
         </a>
         <div class="footer-socials">
-          <a
-            href="https://www.linkedin.com/company/techbridge-services/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <i class="fab fa-linkedin-in" aria-hidden="true"></i> LinkedIn
+          <a href="https://www.linkedin.com/company/techbridge-services/" rel="noopener noreferrer" target="_blank">
+            <i aria-hidden="true" class="fab fa-linkedin-in"></i> LinkedIn
           </a>
-          <a
-            href="https://www.facebook.com/p/Baselink-Services-100066771475783/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <i class="fab fa-facebook-f" aria-hidden="true"></i> Facebook
+          <a href="https://www.facebook.com/p/Baselink-Services-100066771475783/" rel="noopener noreferrer"
+            target="_blank">
+            <i aria-hidden="true" class="fab fa-facebook-f"></i> Facebook
           </a>
         </div>
       </div>
     </div>
-
     <div class="container footer-bottom">
       <p>© 2026 TechBridge by Baselink Services Limited. All rights reserved.</p>
       <p class="footer-task-tag">Challenge Hub • Internship Task 5</p>
     </div>
   </footer>
-
   <!-- ==================== CHALLENGE DETAILS MODAL ==================== -->
-  <div
-    class="modal-backdrop hidden"
-    id="challengeModal"
-    role="dialog"
-    aria-modal="true"
-    aria-labelledby="modalTitle"
-    aria-hidden="true"
-  >
+  <div aria-hidden="true" aria-labelledby="modalTitle" aria-modal="true" class="modal-backdrop hidden"
+    id="challengeModal" role="dialog">
     <div class="modal-container" id="modalContainer">
       <!-- Modal Header -->
       <div class="modal-header">
         <div class="modal-badges" id="modalBadges">
           <!-- Track & Difficulty badges injected dynamically -->
         </div>
-        <button
-          type="button"
-          class="modal-close-btn"
-          id="modalCloseBtn"
-          aria-label="Close challenge details"
-        >
-          <i data-lucide="x" aria-hidden="true"></i>
+        <button aria-label="Close challenge details" class="modal-close-btn" id="modalCloseBtn" type="button">
+          <i aria-hidden="true" data-lucide="x"></i>
         </button>
       </div>
-
       <!-- Modal Scrollable Body -->
       <div class="modal-body">
-        <h2 id="modalTitle" class="modal-title">Challenge Title</h2>
-
+        <h2 class="modal-title" id="modalTitle">Challenge Title</h2>
         <div class="modal-meta-strip">
           <div class="meta-pill">
-            <i data-lucide="clock" aria-hidden="true"></i>
+            <i aria-hidden="true" data-lucide="clock"></i>
             <span>Estimated Time: <strong id="modalTime">3–5 days</strong></span>
           </div>
           <div class="meta-pill">
-            <i data-lucide="wrench" aria-hidden="true"></i>
+            <i aria-hidden="true" data-lucide="wrench"></i>
             <span>Tools: <strong id="modalToolsText">Excel / Google Sheets</strong></span>
           </div>
         </div>
-
         <!-- Overview & Objective -->
         <div class="modal-section">
-          <h3><i data-lucide="file-text" aria-hidden="true"></i> Overview</h3>
+          <h3><i aria-hidden="true" data-lucide="file-text"></i> Overview</h3>
           <p id="modalDescription"></p>
         </div>
-
         <div class="modal-section highlight-box">
-          <h3><i data-lucide="target" aria-hidden="true"></i> Challenge Objective</h3>
+          <h3><i aria-hidden="true" data-lucide="target"></i> Challenge Objective</h3>
           <p id="modalObjective"></p>
         </div>
-
         <!-- Two-Column Grid: Skills & Tools -->
         <div class="modal-two-col">
           <div class="modal-section">
-            <h3><i data-lucide="award" aria-hidden="true"></i> Skills Required</h3>
+            <h3><i aria-hidden="true" data-lucide="award"></i> Skills Required</h3>
             <div class="tag-cloud" id="modalSkills"></div>
           </div>
           <div class="modal-section">
-            <h3><i data-lucide="cpu" aria-hidden="true"></i> Recommended Tools</h3>
+            <h3><i aria-hidden="true" data-lucide="cpu"></i> Recommended Tools</h3>
             <div class="tag-cloud" id="modalTools"></div>
           </div>
         </div>
-
         <!-- Steps to Complete -->
         <div class="modal-section">
-          <h3><i data-lucide="list-checks" aria-hidden="true"></i> Tasks & Steps to Complete</h3>
+          <h3><i aria-hidden="true" data-lucide="list-checks"></i> Tasks &amp; Steps to Complete</h3>
           <ol class="modal-steps-list" id="modalSteps"></ol>
         </div>
-
         <!-- Deliverables & Expected Outcome -->
         <div class="modal-two-col">
           <div class="modal-section">
-            <h3><i data-lucide="package-check" aria-hidden="true"></i> Expected Deliverables</h3>
+            <h3><i aria-hidden="true" data-lucide="package-check"></i> Expected Deliverables</h3>
             <ul class="modal-bullet-list" id="modalDeliverables"></ul>
           </div>
           <div class="modal-section outcome-box">
-            <h3><i data-lucide="check-circle-2" aria-hidden="true"></i> Expected Outcome</h3>
+            <h3><i aria-hidden="true" data-lucide="check-circle-2"></i> Expected Outcome</h3>
             <p id="modalOutcome"></p>
           </div>
         </div>
       </div>
-
       <!-- Modal Footer -->
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" id="modalCloseFooterBtn">
+        <button class="btn btn-secondary" id="modalCloseFooterBtn" type="button">
           Close Window
         </button>
-        <button type="button" class="btn btn-gold" id="startChallengeBtn">
-          <i data-lucide="rocket" aria-hidden="true"></i>
+        <button class="btn btn-gold" id="startChallengeBtn" type="button">
+          <i aria-hidden="true" data-lucide="rocket"></i>
           <span>Start This Challenge</span>
         </button>
       </div>
     </div>
   </div>
-
   <!-- Toast Notification -->
-  <div class="toast hidden" id="toastNotification" role="status" aria-live="polite">
-    <i data-lucide="check-circle" aria-hidden="true"></i>
+  <div aria-live="polite" class="toast hidden" id="toastNotification" role="status">
+    <i aria-hidden="true" data-lucide="check-circle"></i>
     <span id="toastMessage">Challenge selected!</span>
   </div>
-
   <!-- Main JavaScript -->
-  <script src="js/script.js"></script>
+  <script src="script.js"></script>
 </body>
+
 </html>
